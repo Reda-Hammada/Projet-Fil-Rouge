@@ -28,6 +28,50 @@ class User {
 
     }
 
-    
+    public function getImage(){
+
+        return $this->image;
+    }
+
+    public function getFullName(){
+
+        return $this->fullName;
+    }
+
+    public function setFullName($fullName){
+
+        $this->fullName = $fullName;
+    }
+
+    public function setUserName($userName){
+
+        $this->userName = $userName;
+    }
+
+    public function getUserName(){
+
+        return $this->userName;
+    }
+
+    public function setEmail($email){
+
+        $this->email = $email;
+
+    }
+
+    public function getEmail(){
+
+        return $this->email;
+    }
+
+    public function setPassword($password){
+
+        $this->password = $password;
+    }
+
+    public function getPassword(){
+
+        return $this->password;
+    }
 
 }

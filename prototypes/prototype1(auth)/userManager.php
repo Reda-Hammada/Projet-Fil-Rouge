@@ -1,5 +1,7 @@
 <?php
 
+include './config.php';
+
 
 class Usermanager {
  
@@ -17,7 +19,7 @@ class Usermanager {
 
 
 
-        
+
     }
 
 
