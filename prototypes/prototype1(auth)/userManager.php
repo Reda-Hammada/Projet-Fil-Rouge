@@ -13,13 +13,19 @@ class Usermanager {
 
     }
 
-    public function createUser(){
+    public function createUser($user){
+
+        $fullName = $user->getFullName();
+        $userName = $user->getUserName();
+
+    }
 
 
 
+    public function logIn(){
 
 
-
+        
     }
 
 

@@ -4,7 +4,6 @@ class User {
 
 
     private $id;
-    private $image;
     private $fullName;
     private $userName;
     private $email;
@@ -22,16 +21,6 @@ class User {
         return $this->id;
     }
 
-    public function setImage($image){
-
-        $this->image = $image;
-
-    }
-
-    public function getImage(){
-
-        return $this->image;
-    }
 
     public function getFullName(){
 
