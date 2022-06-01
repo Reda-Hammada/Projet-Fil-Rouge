@@ -4,7 +4,7 @@
 
 
     private $host = 'localhost';
-    private $db_name = 'commands';
+    private $db_name = 'commandes';
     private $username = 'root';
     private $password ='';
     private $connect;
@@ -15,8 +15,8 @@
 
        try{
 
-        $this->connect = new PDO('mysql:host=' . $this->host . ';db_name=' . $this->db_name,
-        $this->username , $this->password);
+        $this->connect = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->db_name,
+        $this->username,$this->password);
 
 
        }

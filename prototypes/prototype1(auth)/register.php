@@ -1,6 +1,5 @@
 <?php
 
-include './config.php';
 include './userManager.php';
 include './userClass.php';
 
@@ -8,9 +7,8 @@ include './userClass.php';
 $db = new DataBase();
 $userManager = new userManager($db);
 
-if(isset($_POST)):
 
-    if($_POST['password'] ==  $_POST['cPassword']):
+if(isset($_POST)){
 
         $user = new User();
         $user->setFullName($_POST['fullName']);
@@ -19,9 +17,11 @@ if(isset($_POST)):
         $user->setPassword($_POST['password']);
         $userManager->createUser($user);
 
-    endif;
 
-endif;
+  
+}
+
+
 
 
 ?>
@@ -42,7 +42,6 @@ endif;
         <input type="text" name="userName" placeholder="enter your username here">
         <input type="email" name="email" plachoder ="enter your email here">
         <input type="password" name="password" placeholder="enter your password here">
-        <input type="password" name="cPassowrd" placeholder="confirm your password">
         <input type="submit" value="sign up" >
     </form>
 </body>
