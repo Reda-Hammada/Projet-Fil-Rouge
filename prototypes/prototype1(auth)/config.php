@@ -4,9 +4,10 @@
 
 
     private $host = 'localhost';
-    private $db_name = 'commandes';
+    private $dbname = 'commandes';
     private $username = 'root';
     private $password ='';
+    private $dsn;
     private $connect;
 
     public function connectDB() {
@@ -15,15 +16,17 @@
 
        try{
 
-        $this->connect = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->db_name,
-        $this->username,$this->password);
+
+        $this->dsn = "mysql:host=$this->host; dbname=$this->dbname;";
+        $this->connect = new PDO($this->dsn, $this->username, $this->password);
+  
 
 
        }
 
-       catch(PDOException  $error){
+       catch(PDOException  $e){
 
-        echo 'Connection error: ' . $error->getMessage();
+        echo 'Connection error: ' . $e->getMessage();
 
        }
 
@@ -33,4 +36,6 @@
     }
 
 
- }
+    }
+
+ 

@@ -3,12 +3,11 @@
 include './userManager.php';
 include './userClass.php';
 
-
-$db = new DataBase();
+$database = new DataBase();
+$db =  $database->connectDB();
 $userManager = new userManager($db);
 
-
-if(isset($_POST)){
+if(isset($_POST['submit'])){
 
         $user = new User();
         $user->setFullName($_POST['fullName']);
@@ -36,13 +35,13 @@ if(isset($_POST)){
     <title>Register</title>
 </head>
 <body>
-    <form method="POST" enctype="multipart/form-data">
+    <form method="POST">
 
         <input type="text" name="fullName" placholder="enter your fullname here">
         <input type="text" name="userName" placeholder="enter your username here">
         <input type="email" name="email" plachoder ="enter your email here">
         <input type="password" name="password" placeholder="enter your password here">
-        <input type="submit" value="sign up" >
+        <input type="submit" value="sign up" name="submit" >
     </form>
 </body>
 </html>
