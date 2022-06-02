@@ -53,20 +53,22 @@ class Usermanager {
                
             }
 
-            // elseif(empty($_SESSION)){
-                    
-            //     header('location:login.php');
-            // }
                 
-
-          
-
-        
 
         }
 
+
+
         
     }
+
+
+
+    public function editCredentials(){
+
+        
+    }
+
         
     
 

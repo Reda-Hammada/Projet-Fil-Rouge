@@ -7,6 +7,7 @@ class User {
     private $fullName;
     private $userName;
     private $email;
+    private $newPassword;
     private $password;
 
 
@@ -61,6 +62,16 @@ class User {
     public function getPassword(){
 
         return $this->password;
+    }
+
+    public function setNewPassword($newPassword){
+
+        $this->newPassword = $newPassword;
+    }
+
+    public function getNewPassword($newPassword){
+
+        return $this->newPassword;
     }
 
 }
