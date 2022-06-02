@@ -15,7 +15,8 @@
 
         $user->setEmail($_POST['email']);
         $user->setPassword($_POST['password']);  
-        $userManager->logIn($user);     
+        $error = $userManager->logIn($user); 
+            
 
 
 
@@ -46,7 +47,8 @@
     <form method="POST">
         <input name="email" type="email" placeholder="enter your email" required>
         <input name="password" type="password" placeholder="enter your password" required>
-        <input type="submit" value="logIn">
+        <input name="submit" type="submit" value="logIn">
+        <p><?php   if(isset($error)){ echo $error;} ?> </p>
     </form>
 </body>
 </html>
