@@ -40,37 +40,38 @@ class Usermanager {
         $result = $stmt->fetch(PDO::FETCH_OBJ); 
        
         // check if the password and email in loging is compatible to the one in the database 
-        if(isset($result)){
+        if(!empty($result)){
 
             if($email == $result->email && $pass == $result->pass_word){
 
                 $_SESSION['id'] = $result->id;
                 $_SESSION['fullName'] = $result->full_name;
+                $_SESSION['email'] = $result->email;
+                $_SESSION['pass_word'] = $result->pass_word;
                 header('location:./../admin/dashboard.php');
-    
-    
+                
+               
             }
 
-            elseif($email != $result['email'] && $pass != $result['pass_word']){
+            // elseif(empty($_SESSION)){
+                    
+            //     header('location:login.php');
+            // }
+                
 
-                $error = "password or email is invalid";
-                return $error;
-            }
+          
 
-        else{
+        
 
-            header('location:register.php');
         }
 
-        }
         
     }
+        
+    
 
 
-    public function sendEmail(){
 
-
-    }
 
 
 
