@@ -43,7 +43,7 @@ $id = $_SESSION['id'];
                 <p onClick="renderEmail()" id='email'>Change your email</p>
             </div>
             <div>
-                <p id='password'> change your password</p>
+                <p  onClick="renderPassword()" id='pass'> change your password</p>
 
             </div>
         </div>
