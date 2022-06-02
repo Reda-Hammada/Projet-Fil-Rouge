@@ -1,7 +1,8 @@
 <?php
 
-include './userManager.php';
-include './userClass.php';
+ include '../../managers/userManager.php';
+include '../../entites/userClass.php';
+include "../../config/config.php";
 
 $database = new DataBase();
 $db =  $database->connectDB();
@@ -37,10 +38,10 @@ if(isset($_POST['submit'])){
 <body>
     <form method="POST">
 
-        <input type="text" name="fullName" placholder="enter your fullname here">
-        <input type="text" name="userName" placeholder="enter your username here">
-        <input type="email" name="email" plachoder ="enter your email here">
-        <input type="password" name="password" placeholder="enter your password here">
+        <input type="text" name="fullName" placholder="enter your fullname here" required>
+        <input type="text" name="userName" placeholder="enter your username here" required>
+        <input type="email" name="email" plachoder ="enter your email here" required>
+        <input type="password" name="password" placeholder="enter your password here" required>
         <input type="submit" value="sign up" name="submit" >
     </form>
 </body>
