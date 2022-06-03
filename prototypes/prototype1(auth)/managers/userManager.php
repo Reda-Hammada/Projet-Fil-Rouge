@@ -62,13 +62,38 @@ class Usermanager {
         
     }
 
+    public function changeEmail($user,$id){
+
+        $newEmail = $user->getEmail();
+        $password = md5($user->getPassword());   
+        $query =  'SELECT * FROM users WHERE id =:id';
+        $stmt = $this->connect->prepare($query);
+        $stmt->execute(['id'=>$id]);
+        $result = $stmt->fetch(PDO::FETCH_OBJ);     
+
+        if($result->pass_word == $password){
+
+            $updateEmail = 'UPDATE users SET email =:newEmail WHERE id = :id';
+            $prepare = $this->connect->prepare($updateEmail);
+            $prepare->executed(['newEmail'=>$newEmail, 'id'=>$id]);
+
+        }
+
+        else{
+
+            $error = 'password is Wrong';
+            return $error;
+        }
+     
 
 
-    public function editCredentials(){
+    }
+
+
+    public function changePassword(){
 
         
     }
-
         
     
 

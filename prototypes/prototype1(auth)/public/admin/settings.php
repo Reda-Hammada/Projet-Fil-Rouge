@@ -1,6 +1,13 @@
 <?php
 
 session_start();
+$id = $_SESSION['id'];
+
+if(!$_SESSION['email'] && !$_SESSION['pass_word']){
+
+    header('location:../auth/login.php');
+
+}
 
 include '../../managers/userManager.php';
 include '../../entites/userClass.php';
@@ -11,11 +18,16 @@ $db = $dataBase->connectDB();
 $userManager = new Usermanager($db);
 $user = new User();
 
+    if(isset($_POST['email'])){
+        
+        $user->setEmail();
+        $user->setPassword();
+        $userManager->changeEmail($id,$user);    
+    }
 
 
 
 
-$id = $_SESSION['id'];
 ?>
 
 
@@ -43,12 +55,15 @@ $id = $_SESSION['id'];
                 <p onClick="renderEmail()" id='email'>Change your email</p>
             </div>
             <div>
-                <p  onClick="renderPassword()" id='pass'> change your password</p>
+                <p  onClick="renderPass()" id='pass'> change your password</p>
 
             </div>
         </div>
-        <div id="para">
+        <div id="emailDiv">
            
+        </div>
+        <div id='passDiv'>
+
         </div>
     </section>
     

@@ -1,43 +1,64 @@
-
+// render email form
 const renderEmail = () => {
 
     const email = document.getElementById('email');
-    var para = document.getElementById('para');
+    var emailDiv = document.getElementById('emailDiv');
 
-    
+            
         if(email.click){
-    
+
             const formEmail = `<form method="POST">
-                                <input name="newEmail" placeholder='your new email' name='email' type="text">
-                                <input name="newPassword" placeholder="your password" type="password"  >
-                                <input name"email" type="submit" value="change your email">
-                            </form>`;
+            <input name="newEmail" placeholder='your new email' name='email' type="text">
+            <input name="newPassword" placeholder="your password" type="password"  >
+            <input name="email" type="submit" value="change your email">
+                </form>`;
 
-            para.insertAdjacentHTML('afterbegin',formEmail);
-        
-        
-    
+           while(emailDiv.firstChild){
+
+                emailDiv.removeChild(emailDiv.firstChild);
+                emailDiv.insertAdjacentHTML('beforebegin',formEmail);
+           }
+
+           
+            
+            
+
+
+
         }
-    }
-
-
-
-    const renderPassword = () => {
         
+           
+        }
+
+
+
+    //render password form
+    
+const renderPass = () => {
+    var passDiv = document.getElementById('passDiv');
+
         const password = document.getElementById('pass');
 
         if(password.click){
 
             const formPass = `<form method="POST">
-                                <input name="newEmail" placeholder='your new email' name='email' type="text">
-                                <input name="newPassword" placeholder="your password" type="password"  >
-                                <input name"email" type="submit" value="change your email">
+                                <input name="oldPassword" placeholder="your old password" type="password">
+                                <input name="newPassword" placeholder="your new your password" type="password"  >
+                                <input name="password" type="submit" value="change your password">
                             </form>`;
 
-            para.insertAdjacentHTML('afterbegin',formPass);
+            while(passDiv.firstChild){
+
+                passDiv.removeChild(passDiv.firstChild);
+                passDiv.insertAdjacentHTML('beforebegin',formPass);
+
+
+                
+                           }
+                
 
         }
-    }
+}
 
 
 
