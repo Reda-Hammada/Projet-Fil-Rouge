@@ -69,7 +69,7 @@ class User {
         $this->newPassword = $newPassword;
     }
 
-    public function getNewPassword($newPassword){
+    public function getNewPassword(){
 
         return $this->newPassword;
     }

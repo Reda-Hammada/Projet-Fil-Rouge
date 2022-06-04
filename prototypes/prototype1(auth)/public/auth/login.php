@@ -11,6 +11,16 @@
     $userManager = new Usermanager($db);
     $user = new User();
 
+    if(isset($_SESSION['email'],  $_SESSION['pass_word'])){
+
+        if($_SESSION['email'] && $_SESSION['pass_word']):
+
+        header('location:./../admin/dashboard.php');
+
+        endif;
+    }
+    
+
     if(isset($_POST['submit'])){
 
         $user->setEmail($_POST['email']);
@@ -26,14 +36,7 @@
 
 
 
-
-
-
- 
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">

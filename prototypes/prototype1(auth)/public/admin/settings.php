@@ -1,6 +1,12 @@
 <?php
 
+include '../../managers/userManager.php';
+include '../../entites/userClass.php';
+include '../../config/config.php';
+
+
 session_start();
+
 $id = $_SESSION['id'];
 
 if(!$_SESSION['email'] && !$_SESSION['pass_word']){
@@ -9,22 +15,44 @@ if(!$_SESSION['email'] && !$_SESSION['pass_word']){
 
 }
 
-include '../../managers/userManager.php';
-include '../../entites/userClass.php';
-include '../../config/config.php';
+    $dataBase = new DataBase();
+    $db = $dataBase->connectDB();
+    $userManager = new Usermanager($db);
+    $userEmail = new User();
+    $userPass = new User();
 
-$dataBase = new DataBase();
-$db = $dataBase->connectDB();
-$userManager = new Usermanager($db);
-$user = new User();
+
+
+
+
 
     if(isset($_POST['email'])){
-        
-        $user->setEmail();
-        $user->setPassword();
-        $userManager->changeEmail($id,$user);    
+
+
+        if(!$userEmail):
+
+            $userEmail->setEmail($_POST['newEmail']);
+            $userEmail->setPassword($_POST['cPassword']);
+            $userManager->changeEmail($id,$userEmail); 
+
+        endif;   
+
     }
 
+
+    if(isset($_POST['password'])){
+
+
+        if(!$userPass):
+
+        $userPass->setPassword($_POST['oldPassword']);
+        $userPass->setNewPassword($_POST['newPassword']);
+        $userManager->changePassword($id, $userPass);
+
+
+        endif;
+
+    }
 
 
 
@@ -43,7 +71,7 @@ $user = new User();
     <title>Document</title>
     <script>
         
-
+<p>lorem</p>
 
 
     </script>
@@ -60,10 +88,10 @@ $user = new User();
             </div>
         </div>
         <div id="emailDiv">
-           
+           <p><?php if(isset($errorEmail)){ echo $errorEmail; } ?></p>
         </div>
         <div id='passDiv'>
-
+            <p><?php if(isset($errorPassword)){echo $errorPassword; } ?></p>
         </div>
     </section>
     

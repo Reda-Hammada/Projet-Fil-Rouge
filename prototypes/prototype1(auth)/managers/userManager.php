@@ -62,11 +62,11 @@ class Usermanager {
         
     }
 
-    public function changeEmail($user,$id){
+    public function changeEmail($userEmail,$id){
 
-        $newEmail = $user->getEmail();
-        $password = md5($user->getPassword());   
-        $query =  'SELECT * FROM users WHERE id =:id';
+        $newEmail = $userEmail->getEmail();
+        $password = md5($userEmail->getPassword());   
+        $query =  'SELECT pass_word FROM users WHERE id =:id';
         $stmt = $this->connect->prepare($query);
         $stmt->execute(['id'=>$id]);
         $result = $stmt->fetch(PDO::FETCH_OBJ);     
@@ -75,7 +75,7 @@ class Usermanager {
 
             $updateEmail = 'UPDATE users SET email =:newEmail WHERE id = :id';
             $prepare = $this->connect->prepare($updateEmail);
-            $prepare->executed(['newEmail'=>$newEmail, 'id'=>$id]);
+            $prepare->execute(['newEmail'=>$newEmail, 'id'=>$id]);
 
         }
 
@@ -90,9 +90,31 @@ class Usermanager {
     }
 
 
-    public function changePassword(){
+    public function changePassword($userPass,$id){
 
-        
+        $password = md5($userPass->getPassword());
+        $newPassword = md5($userPass->getNewPassword());
+        $checkPassword = 'SELECT pass_word FROM users WHERE id=:id';
+        $stmt = $this->connect->prepare($checkPassword);
+        $stmt->execute(['id'=>$id]);
+        $result = $stmt->fetch(PDO::FETCH_OBJ);
+
+        if($password == $result->pass_word){
+
+            $updatePass = 'UPDATE users SET pass_word = :newPassword WHERE id =:id';
+            $stmt = $this->connect->prepare($updatePass);
+            $stmt->execute(['newPassword'=>$newPassword,'id'=>$id]);
+            header('location:../auth/login.php');
+
+
+        }
+
+        else{
+
+            $errorPass = 'password is not correct';
+            return $errorPass;
+        }
+
     }
         
     
