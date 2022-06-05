@@ -12,6 +12,7 @@
 body {
 
     font-family: var(--font);
+    overflow-x: hidden;
 
 }
 
@@ -38,6 +39,7 @@ body {
 .navLinks ul li a{
 
     text-decoration:none;
+    color: var(--text-color);
 
 }
 
@@ -104,7 +106,7 @@ body {
 
 .heroSection {
 
-    margin-top: 5%;
+    margin-top: 7%;
 }
 
 
@@ -129,6 +131,28 @@ body {
     border-radius: 7px;
     font-size: 1rem;
     cursor: pointer;
+    margin-top: 2%;
 
 }
+
+
+/* Hero section ends */
+
+/*features starts */
+
+.whyChoose h2{
+
+    width: 100%;
+    margin-left: 35%;
+    font-size: 2rem;
+}
+
+.whyChoose p {
+
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+}
+
+
 
