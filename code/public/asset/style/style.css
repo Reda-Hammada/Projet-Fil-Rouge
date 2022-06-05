@@ -16,7 +16,10 @@ body {
 }
 
 /* navbar starts */
+.logo h1{
 
+    margin-left: 5%;
+}
 .navLinks ul li {
 
     list-style-type: none;
@@ -28,7 +31,15 @@ body {
     font-size: 1.2rem;
 }
 
+.navLinks ul{
+    margin-top: 4.6%;
+}
 
+.navLinks ul li a{
+
+    text-decoration:none;
+
+}
 
 .navLinks ul li:hover{
 
@@ -39,7 +50,7 @@ body {
 
 .buttonsContainer {
 
-    margin-top: 1.2%;
+    margin-top: 1.1%;
 
 }
 
@@ -87,7 +98,37 @@ body {
 
 }
 
+/* navbar ends */
+
+/*Hero section starts */
+
+.heroSection {
+
+    margin-top: 5%;
+}
 
 
+.heroSection h1{
 
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+
+.heroSection p {
+
+    font-size: 1.3rem;
+}
+.getStarted {
+
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    width: 120px;
+    height: 35px;
+    font-weight: bold;
+    border-radius: 7px;
+    font-size: 1rem;
+    cursor: pointer;
+
+}
 
