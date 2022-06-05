@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+:root{
+
+    --primary-color: #4E4E91;
+    --text-color:  #555555;
+    --font: 'Rubik', sans-serif;
+
+}
+
+body {
+
+    font-family: var(--font);
+
+}
+
+/* navbar starts */
+
+.navLinks ul li {
+
+    list-style-type: none;
+    display: inline; 
+    padding-right: 30px;
+    cursor: pointer;
+    color: var(--text-color);
+    text-decoration:none;
+    font-size: 1.2rem;
+}
+
+
+
+.navLinks ul li:hover{
+
+    color: #4E4E91;
+
+}
+
+
+.buttonsContainer {
+
+    margin-top: 1.2%;
+
+}
+
+.buttonsContainer .logIn {
+
+    width: 100px;
+    height:39px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1rem;
+    border: none var(--primary-color);
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.buttonsContainer .logIn:hover {
+
+    color: var(--primary-color);
+    border: solid 1px var(--primary-color);
+    background-color: #fff;
+
+}
+
+
+.buttonsContainer .signUp {
+
+    background-color: #fff;
+    color: var(--primary-color);
+    border: solid 1px var(--primary-color);
+    width: 100px;
+    height: 39px;
+    border-radius: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+
+}
+
+.buttonsContainer .signUp:hover {
+
+    background-color: var(--primary-color);
+    border: none var(--primary-color);
+    color: #fff;
+
+
+
+}
+
+
+
+
+

@@ -32,7 +32,7 @@ const renderEmail = () => {
 
 
 
-    //render password form
+//render password form
     
 const renderPass = () => {
     var passDiv = document.getElementById('passDiv');
