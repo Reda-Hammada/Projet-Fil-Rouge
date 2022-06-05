@@ -18,8 +18,9 @@ if(!$_SESSION['email'] && !$_SESSION['pass_word']){
     $dataBase = new DataBase();
     $db = $dataBase->connectDB();
     $userManager = new Usermanager($db);
-    $userEmail = new User();
-    $userPass = new User();
+   
+    $user = new User();
+    
 
 
 
@@ -29,28 +30,29 @@ if(!$_SESSION['email'] && !$_SESSION['pass_word']){
     if(isset($_POST['email'])){
 
 
-        if(!$userEmail):
 
-            $userEmail->setEmail($_POST['newEmail']);
-            $userEmail->setPassword($_POST['cPassword']);
-            $userManager->changeEmail($id,$userEmail); 
 
-        endif;   
+            $user->setEmail($_POST['newEmail']);
+            $user->setPassword($_POST['cPassword']);
+          $error =  $userManager->changeEmail($id,$user); 
+         
+ 
 
     }
+
+
 
 
     if(isset($_POST['password'])){
 
 
-        if(!$userPass):
 
-        $userPass->setPassword($_POST['oldPassword']);
-        $userPass->setNewPassword($_POST['newPassword']);
-        $userManager->changePassword($id, $userPass);
+        $user->setPassword($_POST['oldPassword']);
+        $user->setNewPassword($_POST['newPassword']);
+       $error = $userManager->changePassword($id, $user);
 
 
-        endif;
+        
 
     }
 
@@ -81,6 +83,12 @@ if(!$_SESSION['email'] && !$_SESSION['pass_word']){
         <div>
             <div>
                 <p onClick="renderEmail()" id='email'>Change your email</p>
+                <form method="POST">
+                                <input name="newEmail" placeholder='your new email' name='email' type="text">
+                                <input name="cPassword" placeholder="your password" type="password"  >
+                                <input name="email" type="submit" value="change your email">
+                </form>
+
             </div>
             <div>
                 <p  onClick="renderPass()" id='pass'> change your password</p>
@@ -88,11 +96,9 @@ if(!$_SESSION['email'] && !$_SESSION['pass_word']){
             </div>
         </div>
         <div id="emailDiv">
-           <p><?php if(isset($errorEmail)){ echo $errorEmail; } ?></p>
+           <p><?php if(isset($error)){ echo $error; } ?></p>
         </div>
-        <div id='passDiv'>
-            <p><?php if(isset($errorPassword)){echo $errorPassword; } ?></p>
-        </div>
+      
     </section>
     
     <script src="../asset/script/app.js"></script>

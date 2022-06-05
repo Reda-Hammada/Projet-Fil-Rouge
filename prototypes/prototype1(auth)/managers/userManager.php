@@ -62,10 +62,10 @@ class Usermanager {
         
     }
 
-    public function changeEmail($userEmail,$id){
+    public function changeEmail($id,$user){
 
-        $newEmail = $userEmail->getEmail();
-        $password = md5($userEmail->getPassword());   
+        $newEmail = $user->getEmail();
+        $password = md5($user->getPassword());  
         $query =  'SELECT pass_word FROM users WHERE id =:id';
         $stmt = $this->connect->prepare($query);
         $stmt->execute(['id'=>$id]);
@@ -73,7 +73,7 @@ class Usermanager {
 
         if($result->pass_word == $password){
 
-            $updateEmail = 'UPDATE users SET email =:newEmail WHERE id = :id';
+            $updateEmail = "UPDATE users SET email = :newEmail WHERE id = :id";
             $prepare = $this->connect->prepare($updateEmail);
             $prepare->execute(['newEmail'=>$newEmail, 'id'=>$id]);
 
@@ -90,10 +90,10 @@ class Usermanager {
     }
 
 
-    public function changePassword($userPass,$id){
+    public function changePassword($id, $user){
 
-        $password = md5($userPass->getPassword());
-        $newPassword = md5($userPass->getNewPassword());
+        $password = md5($user->getPassword());
+        $newPassword = md5($user->getNewPassword());
         $checkPassword = 'SELECT pass_word FROM users WHERE id=:id';
         $stmt = $this->connect->prepare($checkPassword);
         $stmt->execute(['id'=>$id]);
@@ -111,8 +111,8 @@ class Usermanager {
 
         else{
 
-            $errorPass = 'password is not correct';
-            return $errorPass;
+            $error = 'password is not wrong';
+            return $error;
         }
 
     }
