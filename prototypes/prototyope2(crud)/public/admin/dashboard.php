@@ -6,6 +6,8 @@ include '../../entites/projectClass.php';
 
 session_start();
 
+$id = $_SESSION['id'];
+
 //  check if user session is set else it will redirect him login page
 if(!$_SESSION['email'] && !$_SESSION['pass_word']){
 
@@ -22,14 +24,18 @@ if(isset($_POST['addProject'])):
 
 
     $project->setUniqueId(uniqid());
-    $project->setProjeName($_POST['projectName']);
+    $project->setProjectName($_POST['projectName']);
     $project->setClientName($_POST['clientName']);
     $project->setstate($_POST['state']);
-    $projectManager->createProject($project);
+    $project->setDescription($_POST['description']);
+    $projectAdded = $projectManager->createProject($id,$project);
 
 
 
 endif;
+
+
+$projects = $projectManager->getProjects();
 
 
 
@@ -52,7 +58,10 @@ endif;
     <header>
     <section>
         <div>
-
+            <pre>
+            <?php var_dump($projects);
+ ?>
+            </pre>
             <?php echo "welcome " . $_SESSION['fullName'] . " this is your dashboard" . "and your id " . $_SESSION['id']; ?>
 
         </div>
@@ -74,6 +83,18 @@ endif;
             <input type='submit' name="addProject" value="add project">
 
         </form>
-    </section
+        <p> <?php if(isset($projectAdded)){ echo $projectAdded;  } ?>
+    </section>
+    <ul>
+        <li><?php echo implode(',', array_map(function($projects){
+
+        return ($projects[key($projects)]);
+        })); ?></li>
+    </ul>
+
+
+        
+   
+    
 </body>
 </html>

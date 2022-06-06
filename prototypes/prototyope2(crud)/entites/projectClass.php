@@ -31,14 +31,14 @@ class Project {
         return $this->projectUniqueId;
     }
 
-    public function setProjectNumber($projectNumber){
+    public function setProjectName($projectName){
         
-        $this->projectNumber = $projectNumber;
+        $this->projectName = $projectName;
     }
 
-    public function getProjectNumber(){
+    public function getProjectName(){
 
-        return $this->projectNumber;
+        return $this->projectName;
     }
 
     public function setClientName($clientName){
@@ -54,6 +54,11 @@ class Project {
     public function setState($state){
 
         return $this->state = $state;
+    }
+
+    public function getState(){
+
+        return $this->state;
     }
 
 
