@@ -49,6 +49,7 @@ $projects = $projectManager->getProjects($id);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../asset/style/style.css">
+    <script src="../asset/script/app.js"></script>
 
     <title>Document</title>
 </head>
@@ -68,13 +69,13 @@ $projects = $projectManager->getProjects($id);
     </section>
     <section>
         <div class='ms-3 mt-3'>
-            <button class='btn btn-success text-white'>Add new project</button>
+            <button  id='showButton' class='btn btn-success text-white'>Add new project</button>
         <div>
         <div class='popupContainer'>
     
             <div class='mt-4 popupForm'>
-                <div class="closePopUp">X</div
-                <form class="addForm"  method='POST'>
+                <div class="closePopUp">X</div>
+                <form onSubmit='' class="addForm"  method='POST'>
                     <div class='form-group '>
                         <input  class="form-control w-75" required type='text' name='projectName'  placeholder ='project name'>
 
@@ -87,7 +88,7 @@ $projects = $projectManager->getProjects($id);
                     <div class='  mt-4 form-group'>
                             
                         <select value="project state"  class="form-control  w-75" required name='state'>
-                            <option></option>
+                            <option disabled selected> project phase</option>
                             <option value="phase 1">phase 1</option>
                             <option value ="phase 2">phase 2</option>
                             <option value="phase 3">phase 3</option>
@@ -96,23 +97,20 @@ $projects = $projectManager->getProjects($id);
 
                     </div>
                     <div class=  mt-4 form-control'>
-                        <textarea  class="  w-75 form-control" required name="description"></textarea>
+                        <textarea  placeholder="project description" class="  w-75 form-control" required name="description"></textarea>
                     </div>
                     <input id="addButton" class="  mt-3 btn bg-success text-white" type='submit' name="addProject" value="add project">
 
                 </form>
             </div>
         </div>
-        <div>
+        <div class='text-center bg-success text-white w-50'>
             <p> <?php if(isset($projectAdded)){ echo $projectAdded;  } ?>
         <div>
     </section>
     
-    </ul>
 
 
         
-   
-    
 </body>
 </html>

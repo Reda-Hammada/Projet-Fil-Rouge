@@ -2,10 +2,18 @@
 
 //popup form 
 
-const showForm = () => {
+const showPopUp = () => {
 
-    const form = document.getElementsByClassName();
-    
+        var button = document.getElementById('showButton');
+
+        if(button.click){
+
+
+        document.querySelector('#popupContainer').style.display='block';
+     
+
+    }
+
 
 
 
@@ -30,7 +38,7 @@ const renderEmail = () => {
 
             
         if(email.click){
-
+[]
             const formEmail = `<form method="POST">
                                 <input name="newEmail" placeholder='your new email' name='email' type="text">
                                 <input name="cPassword" placeholder="your password" type="password"  >
