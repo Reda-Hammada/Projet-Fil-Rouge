@@ -1,3 +1,27 @@
+
+
+//popup form 
+
+const showForm = () => {
+
+    const form = document.getElementsByClassName();
+    
+
+
+
+
+}
+
+
+
+const hideForm = () => {
+
+
+}
+
+
+
+
 // render email form
 const renderEmail = () => {
 

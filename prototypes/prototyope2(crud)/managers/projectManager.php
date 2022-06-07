@@ -46,13 +46,33 @@ class Projectmanager {
 
     // get all projects from the database 
 
-    public function getProjects(){
+    public function getProjects($id){
 
         $query = 'SELECT idUser,project_name,client_name,description,state,uniqueId FROM projects 
-                  INNER JOIN users on users.id = projects.idUser';
+                  INNER JOIN users on users.id = projects.idUser WHERE idUser =:id';
         $stmt = $this->connect->prepare($query);
-        $stmt->execute();
+        $stmt->execute(['id'=>$id]);
         $result = $stmt->fetchall(PDO::FETCH_ASSOC);
-        return $result;
+        $project = new Project();
+
+        $projectsArray = array();
+
+        foreach($result as $fetchedProject){
+
+
+            $project->setUniqueId($fetchedProject['uniqueId']);
+            // $project->setId($fetchedProject['']);
+            $project->setProjectName($fetchedProject['project_name']);
+            $project->setClientName($fetchedProject['client_name']);
+            $project->setState($fetchedProject['state']);
+            $project->setDescription($fetchedProject['description']);
+
+
+            array_push($projectsArray, $project);
+
+
+        }
+
+        return $projectsArray;
     }
 }

@@ -1,0 +1,42 @@
+.popupContainer {
+
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.801);black;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+}
+
+
+.popupForm {
+  
+    width: 70%;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    padding-left: 15%;
+    padding-top: 7%;
+    height: 90%;
+
+}
+
+
+ #addButton {
+
+margin-left: 30%;
+}
+
+.closePopUp  {
+
+    float: right;
+    margin-right: 5%;
+    margin-bottom: 20%;
+}
+
+.closePopUp:hover {
+
+    cursor: pointer;
+    color:green;
+}
