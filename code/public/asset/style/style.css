@@ -45,7 +45,7 @@ body {
 
 .navLinks ul li:hover{
 
-    color: #4E4E91;
+    color: var(--primary-color);
 
 }
 
@@ -110,6 +110,12 @@ body {
 }
 
 
+.heroSection img {
+
+    height: 95%;
+    padding-top: 2%;
+}
+
 .heroSection h1{
 
     font-weight: bolder;
@@ -143,6 +149,7 @@ body {
 .whyChoose {
 
     width: 100%;
+    margin-top: 2%;
   
  
 }
@@ -165,27 +172,62 @@ body {
 .featuresContianer {
 
     width: 100%;
+    text-align: center  ;
+    margin-top: 3%;
     
+}
+
+.feature1IconContainer p {
+
+    width: 50%;
 }
 
  .firstFeature{
 
+    width: 30%;
+    text-align: center;
+    border-radius: 20px;
+    height: 320px;
+
+    margin-top: 3%;
+    box-shadow: 5px 5px 5px 5px whitesmoke;
+    margin-right: 10%;
+    
+
+}
+
+ #manageProjects {
+
     width: 20%;
     text-align: center;
-
+  
 }
 
 
  .secondFeature {
 
-    width: 20%;
     text-align: center;
+    box-shadow: 5px 5px 5px 5px whitesmoke;
+    border-radius: 20px;
+    margin-top: 3%;
+    height: 320px;
+    margin-right: 10%;
+
+
+
+
 
 }
 
 .thirdFeature {
 
-    width: 20%;
     text-align: center;
+    box-shadow: 5px 5px 5px 5px whitesmoke;
+    border-radius: 20px;
+    margin-top: 3%;
+    height: 320px;
+
+
+
 
 }

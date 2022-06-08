@@ -14,7 +14,7 @@
     <header>
         <nav>
             <div class='row'>
-                <div class="col-xs-9 col-md-2 col-lg-4 logo">
+                <div class="col-xs-5 col-md-2 col-lg-4 logo">
                     <h1>InvoiceMe</h1>
                 </div>
                 <div class="col-xs-6 col-lg-5 navLinks">
@@ -30,7 +30,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-xs-6 col-lg-3 buttonsContainer">
+                <div class="col-xs-8 col-lg-3 buttonsContainer">
                     <button class='logIn'>Login</button>
                     <button class='signUp'>Sign up</button>
                 </div>
@@ -46,7 +46,7 @@
             <div class='col-lg-5 col-md-4 freelancer'>
                     <h1>Are you a Freelancer ?</h1>
                 
-                    <p >Lorem ipsum dolor sit amet. At expedita voluptas non dignissimos exercitationem aut iste earum nam perspiciatis qui dignissimos magni.</P>
+                    <p class="freelancerP">Lorem ipsum dolor sit amet. At expedita voluptas non dignissimos exercitationem aut iste earum nam perspiciatis qui dignissimos magni.</P>
                     <button class="getStarted">Gest started</button>
             </div>
             <div class='col-lg-4 col-md-4 heroImage '>
@@ -55,28 +55,63 @@
         </div>
     </section>
     <section class='container whyChoose'>
-        <div class=" col-xs-12 col-lg-12  whyChooseH2">
+        <div class=" col-xs-12 col-md-12 col-lg-12  whyChooseH2">
             <h2>Why to choose InvoiceMe </h2>
         </div>
-        <div class=" col-xs-12 col-lg-12">
-            <p>Lorem ipsum dolor sit amet. At expedita voluptas non dignissimos exercitationem aut iste earum nam perspiciatis qui dignissimos magni.</P>
+        <div class=" col-xs-12 col-md-12 col-lg-12">
+            <p clas="whyChooseP">With invoiceMe you can manage your projects and clients smoothly
+                and let them check their projects progress with one click through sending them and email
+            </P>
 
         </div>
         <div class="container">
             <div class=" featuresContianer row">
-                <div class="firstFeature">
-                   <h3> manage your projects</h3>
-                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, ut. Id voluptates unde ut eaque.</p>
+                <div class="col-lg-3 col-xs-10 firstFeature">
+                   <h4> manage your projects</h4>
+                   <div class='feature1IconContainer'>
+
+                        <img id='manageProjects' src="asset/images/manageprojects.png">
+
+                    </div>
+                    <div>
+                        <p>Save time and manage your projects smoothly</p>
+
+                    </div>
                 </div>
-                <div class="secondFeature">
-                    <h3>make your clients satisfied</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo assumenda esse eveniet. Facere, at corrupti!</p>
-                </div>
-                <div class="thirdFeature">
-                   <h3> work from anywhere </h3>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, vel neque. Dignissimos consequuntur nobis culpa.</p>
+                <div class=" col-lg-3 col-xs-10 secondFeature">
+                    <h4>make your clients satisfied</h4>
+
+                        <div class='feature2IconContainer'>
+
+                            <img id='manageProjects' src="asset/images/clients.png">
+
+                        </div>
+                        <div>
+                            <p>let your clients check their project progress with one click</p>
+                        </div>
+                </div>             
+                <div class=" col-lg-3 col-xs-10 thirdFeature">
+                   <h4> send Email with one click </h4>
+                   <div class='feature3IconContainer'>
+
+                        <img id='manageProjects' src="asset/images/Email.png">
+
+                    </div>
+                    <div>
+                        <p>Send email to your clients about their projects with one click</p>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section>
+        <div>
+            <h2>About us</h2>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita incidunt quidem molestias, inventore, exercitationem rerum placeat rem, esse beatae eius sapiente nisi magni error dolorem officia quos minima hic cumque.</p>
+
+            </div>
+
         </div>
     </section>
 </body>
