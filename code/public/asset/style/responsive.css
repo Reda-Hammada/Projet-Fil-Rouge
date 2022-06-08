@@ -97,7 +97,37 @@
     height: 300px;
    }
 
-   /* about */
+   /* contact button */
 
+
+   
+
+   /* footer */
+
+   footer {
+
+    text-align: center;
+    padding-right: 10%;
+   }
+
+   footer h2 {
+
+          margin-left: 12%;
+   }
+   .quickLinks1  ul li {
+
+
+        margin-top: 5%;    
 }
 
+.getAndRights button {
+
+    margin-left: 9%;
+}
+
+.getInTouch {
+
+    margin-left: 12%;
+}
+
+}

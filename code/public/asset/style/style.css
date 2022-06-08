@@ -4,6 +4,7 @@
 
 * {
     box-sizing: border-box;
+    margin:0;
 }
 
 :root{
@@ -25,6 +26,7 @@ body {
 .logo h1{
 
     margin-left: 5%;
+    margin-top:20px;
 }
 .navLinks ul li {
 
@@ -74,13 +76,6 @@ body {
     cursor: pointer;
 }
 
-.buttonsContainer .logIn:hover {
-
-    color: var(--primary-color);
-    border: solid 1px var(--primary-color);
-    background-color: #fff;
-
-}
 
 
 .buttonsContainer .signUp {
@@ -96,14 +91,20 @@ body {
 
 }
 
-.buttonsContainer .signUp:hover {
 
-    background-color: var(--primary-color);
-    border: none var(--primary-color);
+
+
+.buttonsContainer a  {
+
+    text-decoration: none;
     color: #fff;
+}
 
 
+.buttonsContainer .signUp  a {
 
+    text-decoration: none;
+    color: var(--primary-color);
 }
 
 /* navbar ends */
@@ -131,6 +132,7 @@ body {
 .heroSection p {
 
     font-size: 1.3rem;
+    margin-top: 30px;
 }
 .getStarted {
 
@@ -144,6 +146,14 @@ body {
     font-size: 1rem;
     cursor: pointer;
     margin-top: 2%;
+    margin-top: 20px;
+
+
+}
+
+.getStarted:hover {
+
+    background-color: #FF4800;
 
 }
 
@@ -165,6 +175,8 @@ body {
     width: 100%;
     margin-left: 35%;
     font-size: 2rem;
+
+
     
 }
 
@@ -174,6 +186,8 @@ body {
     width: 50%;
     margin-left: 25%;
     font-size: 1.2rem;
+    margin-top: 20px;
+
 
 }
 
@@ -186,6 +200,16 @@ body {
     
 }
 
+.featuresContianer h4 {
+
+    margin-top: 25px;
+}
+
+.featuresContianer p {
+
+    margin-top: 15px;
+}
+
 .featuresContianer P {
 
     color: var(--text-color);
@@ -193,9 +217,27 @@ body {
 
 }
 
+.feature1IconContainer img {
+
+    margin-top: 15px;
+}
+
+.feature2IconContainer img {
+
+    margin-top: 15px;
+
+}
+
+.feature3IconContainer img {
+
+    margin-top: 15px;
+
+}
+
 .feature1IconContainer p {
 
     width: 50%;
+
 }
 
  .firstFeature{
@@ -262,10 +304,13 @@ body {
 
 }
 
+
+
 .aboutSection p {
     
 
     font-size: 1.2rem;
+    margin-top: 20px;
     
 
 }
@@ -286,6 +331,7 @@ body {
 
     margin-top: 5%;
     width: 100%;
+ 
   
 }
 
@@ -298,8 +344,8 @@ body {
 .formContainer {
 
     width: 60%;
-    margin-left: 25%;
     display: block;
+    margin-left: 24%;
 }
 
 
@@ -323,10 +369,9 @@ body {
 
 .getInTouch {
 
-    width: 100%;
+    width: 60%;
     margin-top: 2%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 30%;
 }
 .contact input[type='submit'] {
 
@@ -365,5 +410,58 @@ body {
 .contact textarea:focus {
 
     border: 2px solid  #FF4800;
+
+}
+
+
+/* footer starts */
+
+footer {
+
+    height: fit-content;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding-top: 5%;
+    margin-top: 5%;
+    padding-bottom: 5%;
+
+
+}
+
+
+
+
+
+footer ul li {
+
+    list-style-type: none;
+}
+
+
+.quickLinks1 ul li {
+
+
+    margin-top: 20%;
+    
+}
+
+.quickLinks2 ul li {
+
+    margin-top: 4%;
+}
+
+.getAndRights button {
+
+
+    background-color: #FF4800;
+    color: #fff;
+    border: none;
+    width: 120px;
+    height: 45px;
+    font-weight: bold;
+    border-radius: 7px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 2%;
 
 }

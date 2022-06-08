@@ -1,3 +1,25 @@
+<?php
+
+
+include '../../managers/emailManager.php';
+include  '../../entites/email.php';
+
+$email = new Email();
+$emailManager = new Emailmanager();
+
+if(isset($_POST['']))
+
+
+
+
+
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,8 +56,8 @@
                     </ul>
                 </div>
                 <div class="col-xs-8 col-lg-3 buttonsContainer">
-                    <button class='logIn'>Login</button>
-                    <button class='signUp'>Sign up</button>
+                    <button class='logIn'><a href="auth/login.php">Login</a></button>
+                    <button class='signUp'><a href='auth/register.php'>Sign up</a></button>
                 </div>
                 
                 
@@ -121,24 +143,48 @@
     <section class='contact'>
         <div>
             <h2 class='contactHeading'>Contact us</h2>
+        </div>
         <div class='formContainer'>
             <form method="post">
                 <div>
-                    <input type='text' placeholder = 'Enter your name' required>
-                    <input type="email" placeholder ='Enter your email' required>
+                    <input name='name' type='text' placeholder = 'Enter your name' required>
+                    <input name='email' type="email" placeholder ='Enter your email' required>
                     <textarea required  placeholder = 'your message' >
                     
                     </textarea>
                     <div class="getInTouch">
-                        
-                        <input type='submit' name='Get in touch' value='Get in touch'>
+
+                        <input type='submit' name='GetInTouch' value='Get in touch'>
 
                     </div>
                 </div>
             </form>
         </div>
     </section>
-    <footer>
+    <footer class='row'>
+        <div class='col-xs-12 col-md-4 col-lg-4'>
+            <h2>Invoice Me</h2>
+        </div>  
+        <div class=" col-xs-12 quickLinks1">
+            <ul>
+                <li>Home</li>
+                <li>Features</li>
+            </ul>
+        </div>
+        <div class="quickLinks2 col-xs-12 col-md-4 col-lg-4">
+            <ul>
+                <li>
+                    About us
+                </li>
+                <li>
+                    Contact
+                </li>
+            </ul>
+        </div>
+        <div class="getAndRights col-xs-12 col-md-3 col-lg-3">
+            <button><a>Get started</a></button>
+            <p>© InvoiceMe. All Rights Reserved</p>
+        </div>
     </footer>
 </body>
 </html>
