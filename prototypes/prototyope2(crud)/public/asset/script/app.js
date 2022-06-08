@@ -1,5 +1,4 @@
 
-
 //popup form 
 
 const showPopUp = () => {
@@ -9,7 +8,7 @@ const showPopUp = () => {
         if(button.click){
 
 
-        document.querySelector('#popupContainer').style.display='block';
+            document.querySelector('.popupContainer').style.display='block';
      
 
     }
@@ -20,11 +19,23 @@ const showPopUp = () => {
 
 }
 
-
-
 const hideForm = () => {
 
 
+}
+
+
+// setting icon 
+
+const setting = () => {
+
+    let settings = document.getElementById('setting');
+    if(settings.click){
+
+        document.querySelector('.setting').style.display='block';
+
+        
+    }
 }
 
 

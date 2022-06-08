@@ -1,3 +1,22 @@
+/* navbr start */
+
+.navBar { 
+
+    height:60px;
+}
+
+
+
+
+
+/* navbar ends */
+
+
+
+
+
+
+
 .popupContainer {
 
         width: 100%;
@@ -39,4 +58,11 @@ margin-left: 30%;
 
     cursor: pointer;
     color:green;
+}
+
+
+
+h2 {
+
+    margin-left: 2%;
 }

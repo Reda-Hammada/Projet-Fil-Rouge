@@ -140,6 +140,13 @@ body {
 
 /*features starts */
 
+.whyChoose {
+
+    width: 100%;
+  
+ 
+}
+
 .whyChoose h2{
 
     width: 100%;
@@ -155,4 +162,30 @@ body {
 }
 
 
+.featuresContianer {
 
+    width: 100%;
+    
+}
+
+ .firstFeature{
+
+    width: 20%;
+    text-align: center;
+
+}
+
+
+ .secondFeature {
+
+    width: 20%;
+    text-align: center;
+
+}
+
+.thirdFeature {
+
+    width: 20%;
+    text-align: center;
+
+}

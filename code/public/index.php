@@ -63,10 +63,19 @@
 
         </div>
         <div class="container">
-            <div class="row">
-                <div class="firstFeature"></div>
-                <div class="secondFeature"></div>
-                <div class="thirdFeature"></div>
+            <div class=" featuresContianer row">
+                <div class="firstFeature">
+                   <h3> manage your projects</h3>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, ut. Id voluptates unde ut eaque.</p>
+                </div>
+                <div class="secondFeature">
+                    <h3>make your clients satisfied</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo assumenda esse eveniet. Facere, at corrupti!</p>
+                </div>
+                <div class="thirdFeature">
+                   <h3> work from anywhere </h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, vel neque. Dignissimos consequuntur nobis culpa.</p>
+                </div>
             </div>
         </div>
     </section>
