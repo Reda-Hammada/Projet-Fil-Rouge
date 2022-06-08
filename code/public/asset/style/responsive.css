@@ -14,10 +14,15 @@
 
 
    
-    .navLinks,
-    .buttonsContainer {
+    .navLinks {
 
         display: none;
+   }
+
+   .buttonsContainer {
+
+    margin-top: 17px;
+    margin-left: 0%;
    }
 
    .burgerNav{ 
@@ -91,15 +96,8 @@
 
     height: 300px;
    }
+
+   /* about */
+
 }
 
-@media only screen and (min-width:75em){
-
-    .burgerNav {
-
-        display: none;
-    }
-
-
-  
-}

@@ -12,18 +12,21 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class='container'>
             <div class='row'>
-                <div class="col-xs-5 col-md-2 col-lg-4 logo">
+                <div class="col-xs-4 col-md-2 col-lg-2 logo">
                     <h1>InvoiceMe</h1>
                 </div>
-                <div class="col-xs-6 col-lg-5 navLinks">
+                <div class="col-xs-7 col-lg-5 navLinks">
                     <ul>
                         <li>
                            <a href="index.php">Home</a>
                         </li>
                         <li>
                             Features
+                        </li>
+                        <li>
+                            Contact
                         </li>
                         <li>
                             About
@@ -34,9 +37,9 @@
                     <button class='logIn'>Login</button>
                     <button class='signUp'>Sign up</button>
                 </div>
-                <div class='burgerNav col-xs-3'>
-                    <i class="fa-solid fa-bars"></i>
-                </dvi>
+                
+                
+                 </div>
 
             <div>
         </nav>
@@ -46,7 +49,7 @@
             <div class='col-lg-5 col-md-4 freelancer'>
                     <h1>Are you a Freelancer ?</h1>
                 
-                    <p class="freelancerP">Lorem ipsum dolor sit amet. At expedita voluptas non dignissimos exercitationem aut iste earum nam perspiciatis qui dignissimos magni.</P>
+                    <p class="freelancerP">Go no further, manage your projects and clients easily and make theim satisfied .</P>
                     <button class="getStarted">Gest started</button>
             </div>
             <div class='col-lg-4 col-md-4 heroImage '>
@@ -70,7 +73,7 @@
                    <h4> manage your projects</h4>
                    <div class='feature1IconContainer'>
 
-                        <img id='manageProjects' src="asset/images/manageprojects.png">
+                        <img id='manageProjects' src="asset/images/manageprojects.png" alt="manage projects feature icon">
 
                     </div>
                     <div>
@@ -83,7 +86,7 @@
 
                         <div class='feature2IconContainer'>
 
-                            <img id='manageProjects' src="asset/images/clients.png">
+                            <img id='manageProjects' src="asset/images/clients.png" alt>
 
                         </div>
                         <div>
@@ -104,15 +107,38 @@
             </div>
         </div>
     </section>
-    <section>
-        <div>
+    <section class='aboutSection'>
+        <div class='aboutHeading'>
             <h2>About us</h2>
-            <div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita incidunt quidem molestias, inventore, exercitationem rerum placeat rem, esse beatae eius sapiente nisi magni error dolorem officia quos minima hic cumque.</p>
-
+            <div class='aboutParagraph'>
+                <p>InvoiceMe is a platform for freelancers and auto-entrepreneurs 
+                    that helps them to manage their projects and clients and also facilate the customer relationship managements,
+                    through  making the clients able to check their project progress with one click .</p>
             </div>
 
         </div>
     </section>
+    <section class='contact'>
+        <div>
+            <h2 class='contactHeading'>Contact us</h2>
+        <div class='formContainer'>
+            <form method="post">
+                <div>
+                    <input type='text' placeholder = 'Enter your name' required>
+                    <input type="email" placeholder ='Enter your email' required>
+                    <textarea required  placeholder = 'your message' >
+                    
+                    </textarea>
+                    <div class="getInTouch">
+                        
+                        <input type='submit' name='Get in touch' value='Get in touch'>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+    </footer>
 </body>
 </html>
