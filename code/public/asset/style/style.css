@@ -427,29 +427,29 @@ footer {
     margin-top: 5%;
     padding-bottom: 5%;
 
-
 }
 
 
 
-
+.quickLinks ul li {
+    margin-bottom: 5%;
+    text-align: center;
+    cursor: pointer;
+}
 
 footer ul li {
 
     list-style-type: none;
+    text-align: start;
+    padding-top: 20px ;
+
 }
 
 
-.quickLinks1 ul li {
 
+.getAndRights p {
 
-    margin-top: 20%;
-    
-}
-
-.quickLinks2 ul li {
-
-    margin-top: 4%;
+    padding-top: 20px;
 }
 
 .getAndRights button {
@@ -464,6 +464,6 @@ footer ul li {
     border-radius: 7px;
     font-size: 1rem;
     cursor: pointer;
-    margin-top: 2%;
+  
 
 }

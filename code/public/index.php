@@ -1,29 +1,20 @@
 <?php
 
 
-include '../managers/emailManager.php';
-include  '../entities/email.php';
+// include '../managers/emailManager.php';
+// include  '../entities/email.php';
 
-$email = new Email();
-$emailManager = new Emailmanager();
+// $email = new Email();
+// $emailManager = new Emailmanager();
 
-if(isset($_POST['GetInTouch'])):
+// if(isset($_POST['GetInTouch'])):
 
+//     $email->setFullName($_POST['name']);
+//     $email->setEmail($_POST['email']);
+//     $email->setMessage($_POST['message']);
+//     $emailManager->sendMail($email);
 
-    $email->setFullName($_POST['name']);
-    $email->setEmail($_POST['email']);
-    $email->setMessage($_POST['message']);
-    $emailManager->sendMail($email);
-
-
-
-
-
-endif;
-
-
-
-
+// endif;
 
 
 ?>
@@ -80,9 +71,9 @@ endif;
     <section class=' container  heroSection'>
         <div class='row '>
             <div class='col-lg-5 col-md-4 freelancer'>
-                    <h1>Are you a Freelancer ?</h1>
+                    <h1 class='freelancerHeading'>Are you a Freelancer ?</h1>
                 
-                    <p class="freelancerP">Go no further, manage your projects and clients easily and make theim satisfied .</P>
+                    <p class="freelancerP">Look no further, manage your projects and clients easily and make theim satisfied .</P>
                     <button class="getStarted">Gest started</button>
             </div>
             <div class='col-lg-4 col-md-4 heroImage '>
@@ -173,29 +164,34 @@ endif;
         </div>
     </section>
     <footer class='row'>
-            <div class='col-xs-12 col-md-4 col-lg-3'>
-                <h2>Invoice Me</h2>
-            </div>  
-            <div class="col-xs-12 col-lg-4 quickLinks1">
-                <ul>
-                    <li>Home</li>
-                    <li>Features</li>
-                </ul>
-            </div>
-            <div class="quickLinks2 col-xs-12 col-md-4 col-lg-4">
-                <ul>
-                    <li>
-                        About us
-                    </li>
-                    <li>
-                        Contact
-                    </li>
-                </ul>
-            </div>
-            <div class="getAndRights col-xs-12 col-md-3 col-lg-3">
-                <button><a>Get started</a></button>
-                <p>© InvoiceMe. All Rights Reserved</p>
-            </div>
+      
+            <div class='col-xs-12 col-md-3 col-lg-3'>
+                    <h2>Invoice Me</h2>
+                </div>  
+                <div class="col-xs-12 md-3 col-lg-3 quickLinks ">
+                    <ul class='quickLinks1' >
+                        <li>Home</li>
+                        <li>Features</li>
+                    </ul>
+                    <ul  class='quickLinks2'>
+                        <li>
+                            About us
+                        </li>
+                        <li>
+                            Contact
+                        </li>
+                    </ul>
+                </div>
+                <div class="getAndRights col-xs-12 col-md-3 col-lg-3">
+                    <div class='getStartedContainer'>
+                        <button><a>Get started</a></button>
+                    </div>
+                    <div class='copyRightsContainer'>
+                    
+                        <p>© InvoiceMe. All Rights Reserved</p>
+                    </div>
+               </div>
+        
     </footer>
 </body>
 </html>
