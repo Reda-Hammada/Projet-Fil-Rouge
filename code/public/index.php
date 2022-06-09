@@ -1,14 +1,25 @@
 <?php
 
 
-include '../../managers/emailManager.php';
-include  '../../entites/email.php';
+include '../managers/emailManager.php';
+include  '../entities/email.php';
 
 $email = new Email();
 $emailManager = new Emailmanager();
 
-if(isset($_POST['']))
+if(isset($_POST['GetInTouch'])):
 
+
+    $email->setFullName($_POST['name']);
+    $email->setEmail($_POST['email']);
+    $email->setMessage($_POST['message']);
+    $emailManager->sendMail($email);
+
+
+
+
+
+endif;
 
 
 
@@ -34,7 +45,7 @@ if(isset($_POST['']))
 </head>
 <body>
     <header>
-        <nav class='container'>
+        <nav class='container' >
             <div class='row'>
                 <div class="col-xs-4 col-md-2 col-lg-2 logo">
                     <h1>InvoiceMe</h1>
@@ -66,7 +77,7 @@ if(isset($_POST['']))
             <div>
         </nav>
     </header>
-    <section class=' container heroSection'>
+    <section class=' container  heroSection'>
         <div class='row '>
             <div class='col-lg-5 col-md-4 freelancer'>
                     <h1>Are you a Freelancer ?</h1>
@@ -149,7 +160,7 @@ if(isset($_POST['']))
                 <div>
                     <input name='name' type='text' placeholder = 'Enter your name' required>
                     <input name='email' type="email" placeholder ='Enter your email' required>
-                    <textarea required  placeholder = 'your message' >
+                    <textarea name='message' required  placeholder = 'your message' >
                     
                     </textarea>
                     <div class="getInTouch">
@@ -162,29 +173,29 @@ if(isset($_POST['']))
         </div>
     </section>
     <footer class='row'>
-        <div class='col-xs-12 col-md-4 col-lg-4'>
-            <h2>Invoice Me</h2>
-        </div>  
-        <div class=" col-xs-12 quickLinks1">
-            <ul>
-                <li>Home</li>
-                <li>Features</li>
-            </ul>
-        </div>
-        <div class="quickLinks2 col-xs-12 col-md-4 col-lg-4">
-            <ul>
-                <li>
-                    About us
-                </li>
-                <li>
-                    Contact
-                </li>
-            </ul>
-        </div>
-        <div class="getAndRights col-xs-12 col-md-3 col-lg-3">
-            <button><a>Get started</a></button>
-            <p>© InvoiceMe. All Rights Reserved</p>
-        </div>
+            <div class='col-xs-12 col-md-4 col-lg-3'>
+                <h2>Invoice Me</h2>
+            </div>  
+            <div class="col-xs-12 col-lg-4 quickLinks1">
+                <ul>
+                    <li>Home</li>
+                    <li>Features</li>
+                </ul>
+            </div>
+            <div class="quickLinks2 col-xs-12 col-md-4 col-lg-4">
+                <ul>
+                    <li>
+                        About us
+                    </li>
+                    <li>
+                        Contact
+                    </li>
+                </ul>
+            </div>
+            <div class="getAndRights col-xs-12 col-md-3 col-lg-3">
+                <button><a>Get started</a></button>
+                <p>© InvoiceMe. All Rights Reserved</p>
+            </div>
     </footer>
 </body>
 </html>
