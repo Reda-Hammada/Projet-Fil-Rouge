@@ -473,11 +473,19 @@ footer {
     cursor: pointer;
 }
 
+.quickLinks1   a,
+.quickLinks2 a {
+
+    text-decoration: none;
+    color: #fff;
+}
+
 footer ul li {
 
     list-style-type: none;
     text-align: start;
     padding-top: 20px ;
+
 
 }
 

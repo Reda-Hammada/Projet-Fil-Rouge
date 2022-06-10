@@ -67,11 +67,8 @@
     margin-top: 5%;
    }
 
-   .quickLinks ul li {
 
-    margin-left: 20%;
-   }
-   
+
   
    /* features */
 
@@ -110,21 +107,28 @@
 
    /* footer */
 
+ 
    footer {
 
     text-align: center;
-    padding-right: 10%;
    }
-
    footer h2 {
 
-          margin-left: 12%;
+    text-align: center;
+
    }
+
+   .quickLinks1,
+   .quickLinks2  {
+
+       margin-right: 7%;
+   }
+
 
  
 .getAndRights button {
 
-    margin-left: 9%;
+    margin-right: 18%;
 }
 
 .getInTouch {

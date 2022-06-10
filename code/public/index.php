@@ -50,10 +50,10 @@
                             <a href="#features">Features</a>
                         </li>
                         <li>
-                           <a>Contact</a>
+                           <a href='#contacts'>Contact</a>
                         </li>
                         <li>
-                            <a>About</a>
+                            <a href='#aboutus'>About</a>
                         </li>
                     </ul>
                 </div>
@@ -131,7 +131,7 @@
             </div>
         </div>
     </section>
-    <section class='aboutSection'>
+    <section id='aboutus' class='aboutSection'>
         <div class='aboutHeading'>
             <h2>About us</h2>
             <div class='aboutParagraph'>
@@ -144,7 +144,7 @@
     </section>
     <section class='contact'>
         <div class='contactH2Container'>
-            <h2 class='contactHeading'>Contact us</h2>
+            <h2 id='contacts' class='contactHeading'>Contact us</h2>
         </div>
         <div class='formContainer'>
             <form method="post">
@@ -171,18 +171,18 @@
                 <div class="col-xs-12 md-12 col-lg-3 quickLinks ">
                     <ul class='quickLinks1' >
                         <li>
-                            <a>Home</a>
+                            <a href='index.php'>Home</a>
                         </li>
                         <li>
-                            <a>Features</a>
+                            <a href='#features'>Features</a>
                         </li>
                     </ul>
                     <ul  class='quickLinks2'>
                         <li>
-                            <a>About us</a>
+                            <a href='#aboutus'>About us</a>
                         </li>
                         <li>
-                            <a>Contact</a>
+                            <a href='#contacts'>Contact</a>
                         </li>
                     </ul>
                 </div>
