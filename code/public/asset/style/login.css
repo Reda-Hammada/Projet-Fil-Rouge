@@ -97,7 +97,9 @@ body {
     
 }
 
-.logInContainer input[type='email'],input[type='password'] {
+.logInContainer input[type='email'],
+input[type='password'],
+input[type='text'] {
 
     width: 300px;
     border-radius: 5px;
@@ -154,7 +156,7 @@ body {
    /* sign up page */
 
 
-   
+
 
 
 }

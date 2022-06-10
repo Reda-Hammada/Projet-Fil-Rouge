@@ -33,6 +33,7 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='../asset/style/signup.css'>
     <title>Register</title>
 </head>
 <body>
@@ -40,9 +41,11 @@ if(isset($_POST['submit'])){
     
     <form method="POST">
         <div class="logInContainer">
+            <input type='text' name='fullName' placeholder='your fullname' required>
+            <input type='text' name='userName' placeholder='your username' required>
             <input name="email" type="email" placeholder="enter your email" required>
             <input name="password" type="password" placeholder="enter your password" required> <br>
-            <input name="submit" type="submit" value="Log in">
+            <input name="submit" type="submit" value="Sign up">
             <!-- <p><?php   if(isset($error)){ echo $error;} ?> </p> -->
         </div>
 
@@ -52,12 +55,13 @@ if(isset($_POST['submit'])){
         Welcome
     </h1>
     <p class="welcomeP">
-        Log in to access your dashboard.<br> 
-        You don’t have an account yet ?<br>
-        Sign up now 
+        create your account and start using 
+        our features <br>
+       
     </p>
+    <p class='already'> you already have an account ?</p>
     <button class="signUp">
-        <a href='signup.php'>Sign up</a>
+        <a href='login.php'>Log in</a>
     </button>
 </div>
 </section>
