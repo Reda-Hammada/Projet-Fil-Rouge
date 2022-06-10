@@ -133,7 +133,7 @@ input[type='text'] {
 
 /* responsive */
 
-@media only screen and (max-width:800px){    
+@media only screen and (max-width:1200px){    
 
     /* log in page */
 
@@ -151,8 +151,10 @@ input[type='text'] {
     margin-top: 70px;
    }
 
-   .logInContainer input[type='email'],
-    input[type='password'],input[type='text'] {
+   .logInContainer 
+    input[type='email'],
+    input[type='password'],
+    input[type='text'] {
 
 
         width: 200px;

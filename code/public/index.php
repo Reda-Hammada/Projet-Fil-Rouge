@@ -38,28 +38,28 @@
     <header>
         <nav class='container' >
             <div class='row'>
-                <div class="col-xs-4 col-md-2 col-lg-2 logo">
-                    <h1>InvoiceMe</h1>
+                <div class="col-xs-4 col-md-7 col-lg-2 logo">
+                    <h1>MFE</h1>
                 </div>
-                <div class="col-xs-7 col-lg-5 navLinks">
+                <div class="col-xs-7 col-lg-5 md-5 navLinks">
                     <ul>
                         <li>
                            <a href="index.php">Home</a>
                         </li>
                         <li>
-                            Features
+                            <a href="#features">Features</a>
                         </li>
                         <li>
-                            Contact
+                           <a>Contact</a>
                         </li>
                         <li>
-                            About
+                            <a>About</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-xs-8 col-lg-3 buttonsContainer">
+                <div class="col-xs-8 col-lg-3 col-md-4 buttonsContainer">
                     <button class='logIn'><a href="auth/login.php">Login</a></button>
-                    <button class='signUp'><a href='auth/register.php'>Sign up</a></button>
+                    <button class='signUp'><a href='auth/signup.php'>Sign up</a></button>
                 </div>
                 
                 
@@ -70,23 +70,23 @@
     </header>
     <section class=' container  heroSection'>
         <div class='row '>
-            <div class='col-lg-5 col-md-4 freelancer'>
+            <div class='col-lg-5 col-md-12 freelancer'>
                     <h1 class='freelancerHeading'>Are you a Freelancer ?</h1>
                 
                     <p class="freelancerP">Look no further, manage your projects and clients easily and make theim satisfied .</P>
-                    <button class="getStarted">Gest started</button>
+                    <button class="getStarted"><a href='auth/signup.php'>Gest started</a></button>
             </div>
-            <div class='col-lg-4 col-md-4 heroImage '>
+            <div class='col-lg-4 heroImage '>
                 <img src="asset/images/heroSection.svg">
             </div>
         </div>
     </section>
-    <section class='container whyChoose'>
+    <section  id='features' class='container whyChoose'>
         <div class=" col-xs-12 col-md-12 col-lg-12  whyChooseH2">
-            <h2>Why to choose InvoiceMe </h2>
+            <h2 >Why to choose MFE</h2>
         </div>
         <div class=" col-xs-12 col-md-12 col-lg-12">
-            <p clas="whyChooseP">With invoiceMe you can manage your projects and clients smoothly
+            <p id=''clas="whyChooseP">With MFE you can manage your projects and clients smoothly
                 and let them check their projects progress with one click through sending them and email
             </P>
 
@@ -105,7 +105,7 @@
 
                     </div>
                 </div>
-                <div class=" col-lg-3 col-xs-10 secondFeature">
+                <div  class=" col-lg-3 col-xs-10 secondFeature">
                     <h4>make your clients satisfied</h4>
 
                         <div class='feature2IconContainer'>
@@ -135,7 +135,7 @@
         <div class='aboutHeading'>
             <h2>About us</h2>
             <div class='aboutParagraph'>
-                <p>InvoiceMe is a platform for freelancers and auto-entrepreneurs 
+                <p>MFEis a platform for freelancers and auto-entrepreneurs 
                     that helps them to manage their projects and clients and also facilate the customer relationship managements,
                     through  making the clients able to check their project progress with one click .</p>
             </div>
@@ -143,7 +143,7 @@
         </div>
     </section>
     <section class='contact'>
-        <div>
+        <div class='contactH2Container'>
             <h2 class='contactHeading'>Contact us</h2>
         </div>
         <div class='formContainer'>
@@ -165,26 +165,30 @@
     </section>
     <footer class='row'>
       
-            <div class='col-xs-12 col-md-3 col-lg-3'>
-                    <h2>Invoice Me</h2>
+            <div class='col-xs-12 col-md-12 col-lg-3'>
+                    <h2 class='logoFooter'>MFE</h2>
                 </div>  
-                <div class="col-xs-12 md-3 col-lg-3 quickLinks ">
+                <div class="col-xs-12 md-12 col-lg-3 quickLinks ">
                     <ul class='quickLinks1' >
-                        <li>Home</li>
-                        <li>Features</li>
+                        <li>
+                            <a>Home</a>
+                        </li>
+                        <li>
+                            <a>Features</a>
+                        </li>
                     </ul>
                     <ul  class='quickLinks2'>
                         <li>
-                            About us
+                            <a>About us</a>
                         </li>
                         <li>
-                            Contact
+                            <a>Contact</a>
                         </li>
                     </ul>
                 </div>
-                <div class="getAndRights col-xs-12 col-md-3 col-lg-3">
+                <div class="getAndRights col-xs-12 col-md-12 col-lg-3">
                     <div class='getStartedContainer'>
-                        <button><a>Get started</a></button>
+                        <button><a href='auth/signup.php'>Get started</a></button>
                     </div>
                     <div class='copyRightsContainer'>
                     

@@ -11,7 +11,7 @@
 
 /* mobile */
 
-@media only screen and (max-width:800px){
+@media only screen and (max-width:1200px){
 
     .navLinks {
 
@@ -24,21 +24,16 @@
     margin-left: 0%;
    }
 
-   .burgerNav{ 
-       
-    font-size: 1.8rem;
-    margin-left: 30%;
-    margin-top: 20px;
+   .heroSection{
 
-
+    text-align: center;
    }
 
-   .burgerNav:hover{
 
-    color: var(--primary-color);
-    cursor: pointer;
-}
+   .freelancerHeading {
 
+    font-size: 17px;
+   }
 
    
    .freelancer{
@@ -72,6 +67,10 @@
     margin-top: 5%;
    }
 
+   .quickLinks ul li {
+
+    margin-left: 20%;
+   }
    
   
    /* features */
@@ -122,12 +121,7 @@
           margin-left: 12%;
    }
 
-   footer ul li {
-
-
-    margin-left: 10%;
-}
-
+ 
 .getAndRights button {
 
     margin-left: 9%;
@@ -135,8 +129,9 @@
 
 .getInTouch {
 
-    margin-left: 12%;
+    width: 100%;
 }
 
 
 }
+
