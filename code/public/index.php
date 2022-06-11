@@ -1,27 +1,3 @@
-<?php
-
-
-// include '../managers/emailManager.php';
-// include  '../entities/email.php';
-
-// $email = new Email();
-// $emailManager = new Emailmanager();
-
-// if(isset($_POST['GetInTouch'])):
-
-//     $email->setFullName($_POST['name']);
-//     $email->setEmail($_POST['email']);
-//     $email->setMessage($_POST['message']);
-//     $emailManager->sendMail($email);
-
-// endif;
-
-
-?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -146,21 +122,14 @@
         <div class='contactH2Container'>
             <h2 id='contacts' class='contactHeading'>Contact us</h2>
         </div>
-        <div class='formContainer'>
-            <form method="post">
-                <div>
-                    <input name='name' type='text' placeholder = 'Enter your name' required>
-                    <input name='email' type="email" placeholder ='Enter your email' required>
-                    <textarea name='message' required  placeholder = 'your message' >
-                    
-                    </textarea>
-                    <div class="getInTouch">
+        <div class='contactContainer'>
+            
+            <p>
+                Are you looking to collaborate with us ? or get to know more about our platform and services ? 
+                or just ask us some questions ? or just saying Hi ? look no further the best way to reach us out is via our email.
 
-                        <input type='submit' name='GetInTouch' value='Get in touch'>
-
-                    </div>
-                </div>
-            </form>
+            </p>
+            <button class="getInTouch"><a href="mailto:hammada.reda.dev@gmail.com"> Send Email </a></button>
         </div>
     </section>
     <footer class='row'>

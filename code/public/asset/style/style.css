@@ -12,6 +12,7 @@
     --primary-color: #4E4E91;
     --text-color:  #555555;
     --font: 'Rubik', sans-serif;
+    --secondary-color: #FF4800;
 
 }
 
@@ -355,7 +356,7 @@ body {
 .contact{
 
     margin-top: 5%;
-    width: 100%;
+    width: 80%;
     margin-left: 10%;
    
  
@@ -364,88 +365,55 @@ body {
 
 .contactH2Container  {
 
-    width: 80%;
+    width: 100%;
     text-align: center;
     color: var(--primary-color);
 
 }
 
 
+.contactContainer {
 
-
-.formContainer {
-
-    width: 100%;
-    display: block;
+    width: 60%;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 20%;
 }
 
 
 
-.contact input[type='text']
- ,input[type='email']
 
-{
 
-    border: 2px solid  #4E4E91;
-    color: var(--text-color);
-    border-radius: 4px;
-    padding-left: 2%;
-    width: 80%;
-    margin-top: 4%;
-    height: 40px;
-    font-size: 0.9rem;
-   
-}
+
 
 
 .getInTouch {
 
-    width: 30%;
+    width: 120px;
+    height: 40px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 18PX;
-   
-}
-.contact input[type='submit'] {
-
-    display: block;
-    text-align: center;
     background-color: var(--primary-color);
     color: #fff;
-    border: none;
-    height: 45px;
-    font-weight: bold;
     border-radius: 7px;
+    border: 1px solid var(--primary-color);
     font-size: 1rem;
-    cursor: pointer;
-    width: 130px;
-  
+    font-weight: bold;
+   
 }
 
-.contact input[type='submit']:hover{
+.getInTouch:hover {
 
-    background-color: #FF4800;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
 }
 
-.contact textarea {
+.getInTouch a {
 
-    resize:  none;
-    border-radius: 4px;
-    width: 80%;
-    margin-top: 4%;
-    border: 2px solid  #4E4E91;
-    height: 100px;
-    color: var(--text-color)
-
-
+    text-decoration: none;
+    color: #fff;
 }
-
-.contact textarea:focus {
-
-    border: 2px solid  #FF4800;
-
-}
-
 
 /* footer starts */
 
