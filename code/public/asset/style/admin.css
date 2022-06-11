@@ -1,0 +1,117 @@
+body {
+
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+
+}
+
+
+
+
+:root{
+
+    --primary-color: #4E4E91;
+    --text-color:  #555555;
+    --font: 'Rubik', sans-serif;
+    --secondary-color: #413D6D;
+    
+}
+
+/* nvabar */
+
+.sideNavBar {
+
+    width: 25%;
+    height:100vh;
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.navBar {
+
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 40%;
+}
+
+.navBar p {
+
+   font-size: 1.1rem;
+   font-weight: bold;
+   color:  #fff;
+}
+
+.navbar a {
+
+    text-decoration: none;
+    color:#fff;
+}
+
+.adminContainer {
+
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.adminContainer a {
+
+    text-decoration: none;
+    color: #fff;
+}
+/*navbar */
+
+/* dashboard */
+
+.mainContainer {
+
+    width: 80%;
+}
+
+/* popUp */
+
+.popUpButtonContainer button  {
+
+    background-color: var(--primary-color);
+    font-weight: 1.2rem;
+}
+
+.popupContainer {
+
+    display: none;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+.popupForm {
+  
+    width: 70%;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    padding-left: 15%;
+    padding-top: 8%;
+    height: 90%;
+    box-shadow: 3px 3px 3px 3px whitesmoke;
+
+
+}
+
+#addButton {
+
+    background-color: var(--primary-color);
+}
+
+.closeContainer {
+
+    width: 100%;
+    margin-left: 90%;
+}

@@ -61,7 +61,7 @@ class Projectmanager {
 
 
             $project->setUniqueId($fetchedProject['uniqueId']);
-            // $project->setId($fetchedProject['']);
+            // $project->setId($fetchedProject['id']);
             $project->setProjectName($fetchedProject['project_name']);
             $project->setClientName($fetchedProject['client_name']);
             $project->setState($fetchedProject['state']);

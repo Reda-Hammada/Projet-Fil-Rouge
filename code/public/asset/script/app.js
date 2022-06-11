@@ -24,24 +24,7 @@ const hideForm = () => {
 
 }
 
-
-// setting icon 
-
-const setting = () => {
-
-let settings = document.getElementById('setting');
-if(settings.click){
-
-    document.querySelector('.setting').style.display='block';
-
-    
-}
-}
-
-
-
-
-// render email form
+// render change email  form
 const renderEmail = () => {
 
 const email = document.getElementById('email');
@@ -49,7 +32,7 @@ var emailDiv = document.getElementById('emailDiv');
 
         
     if(email.click){
-[]
+
         const formEmail = `<form method="POST">
                             <input name="newEmail" placeholder='your new email' name='email' type="text">
                             <input name="cPassword" placeholder="your password" type="password"  >
@@ -74,9 +57,7 @@ var emailDiv = document.getElementById('emailDiv');
        
     }
 
-
-
-//render password form
+//render change password form
 
 const renderPass = () => {
 var passDiv = document.getElementById('passDiv');
