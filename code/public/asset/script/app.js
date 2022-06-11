@@ -1,9 +1,9 @@
 
-//popup form 
+// show popup form 
 
 const showPopUp = () => {
 
-    var button = document.getElementById('showButton');
+    let button = document.getElementById('showButton');
 
     if(button.click){
 
@@ -13,14 +13,17 @@ const showPopUp = () => {
 
 }
 
-
-
-
-
 }
 
+//hide popup form when click on close mark
 const hideForm = () => {
+ 
+    let closeButton = document.getElementById('closePopUp');
 
+    if(closeButton.click){
+
+        document.querySelector('.popupContainer').style.display='none';
+    }
 
 }
 
@@ -45,12 +48,6 @@ var emailDiv = document.getElementById('emailDiv');
             emailDiv.removeChild(emailDiv.firstChild);
             emailDiv.insertAdjacentHTML('beforebegin',formEmail);
        }
-
-       
-        
-        
-
-
 
     }
     

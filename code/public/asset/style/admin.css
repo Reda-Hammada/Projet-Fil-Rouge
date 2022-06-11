@@ -15,6 +15,7 @@ body {
     --text-color:  #555555;
     --font: 'Rubik', sans-serif;
     --secondary-color: #413D6D;
+    --alternative-color: #FF4800;
     
 }
 
@@ -58,6 +59,30 @@ body {
 
     text-decoration: none;
     color: #fff;
+}
+
+.logoutButton {
+
+    margin-top: 90%;
+    margin-left: 10%;
+}
+
+.logoutButton button {
+
+    border: 1px solid var(--alternative-color);
+    background-color: var(--alternative-color);
+}
+
+.logoutButton a {
+
+    text-decoration: none;
+    color:  #fff;
+}
+
+.adminName {
+
+    margin-top: 10%;
+    margin-left: 5%;
 }
 /*navbar */
 
@@ -105,6 +130,11 @@ body {
 
 }
 
+.popupForm textarea {
+
+    resize: none;
+}
+
 #addButton {
 
     background-color: var(--primary-color);
@@ -114,4 +144,21 @@ body {
 
     width: 100%;
     margin-left: 90%;
+    cursor: pointer;
+    font-size: 1.2rem;
 }
+
+.closeContainer:hover{
+
+    color:var(--primary-color);
+}
+
+.addProjectContainer{
+
+    width: 70%;
+    text-align: center;
+
+}
+
+/*popup  */
+

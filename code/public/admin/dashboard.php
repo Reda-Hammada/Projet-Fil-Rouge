@@ -85,6 +85,12 @@ $projects = $projectManager->getProjects($id);
                 <p class='ms-2 mb-2'><a href='settings.php'>Settings</a></p>
 
             </div>
+            <div class='logoutButton'>
+                <button class='btn'><a href='../auth/logout.php'>log out</a></button>
+            </div>
+            <div class='adminName'>
+                <p><?php echo 'logged as : ' . ucwords($_SESSION['fullName']) ?></p>
+            </div>
 
         </section>
 
@@ -102,7 +108,7 @@ $projects = $projectManager->getProjects($id);
 
                     <div class='closeContainer'>
 
-                        <div class="closePopUp">X</div>
+                        <div id='closePopUp' onclick="hideForm()" class="closePopUp">X</div>
 
                     </div>
 
@@ -145,6 +151,8 @@ $projects = $projectManager->getProjects($id);
          
         </section>
       
+    </section>
+    <section class='projectSection'>
     </section>
     
 
