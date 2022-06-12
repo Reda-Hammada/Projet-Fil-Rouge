@@ -162,3 +162,12 @@ body {
 
 /*popup  */
 
+/* project container */
+
+.edit {
+
+    text-decoration: none;
+    background-color: var(--secondary-color);
+}
+
+

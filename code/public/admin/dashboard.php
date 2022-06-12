@@ -21,16 +21,22 @@ $dataBase = new DataBase();
 $db = $dataBase->connectDB();
 $projectManager = new Projectmanager($db);
 
-
 if(isset($_POST['addProject'])):
 
 
     $project->setUniqueId(uniqid());
     $project->setProjectName($_POST['projectName']);
     $project->setClientName($_POST['clientName']);
+    $project->setEmailClient($_POST['emailClient']);
     $project->setstate($_POST['state']);
     $project->setDescription($_POST['description']);
     $projectAdded = $projectManager->createProject($id,$project);
+    
+
+    // redirecting the user to stop the form from resubmission
+    header('location: dashboard.php');
+
+
 
 
 
@@ -38,7 +44,6 @@ endif;
 
 
 $projects = $projectManager->getProjects($id);
-
 
 
 ?>
@@ -125,6 +130,12 @@ $projects = $projectManager->getProjects($id);
 
                         </div>
 
+                        <div class=' mt-4 form-group'>
+
+                            <input  class=" w-75  form-control" required type='text' name='emailClient'   placeholder ='client email'>
+
+                        </div>
+
                         <div class='  mt-4 form-group'>
                                 
                             <input type='text' class="form-control  w-75" required name='state' placeholder='project phase'>
@@ -148,12 +159,49 @@ $projects = $projectManager->getProjects($id);
 
                 </div>
             </div>
-         
-        </section>
+            <section class='projectSection mt-5'>
+               
+                <div class='w-100 '>
+                    <table class='tableContainer table'>
+                        <thead>
+                            <tr>
+                                <th>project code</th>
+                          
+                                <th>project name</th>
+                           
+                                <th>client name</th>
+                          
+                                <th>state</th>
+
+                                <th>action</th>
+                            </tr>
+                         </thead>
+                            <tbody >
+                            <?php foreach($projects as $project) { ?>
+
+                                <tr>
+                                    <td><?php echo $project->getUniqueId() ?></td>
+                                    <td><?php echo $project->getProjectName() ?></td>
+                                    <td><?php echo $project->getClientName() ?></td>
+                                    <td><?php echo $project->getState() ?></td>
+                                    <td >
+                                        <button class='btn  show '><a class='text-white' href="project.php?=<?php echo $project->getId() ?>">view</a></button>
+                                        <button class='btn  edit'><a class='text-white' href='edit.php?=<?php echo $project->getId() ?>'>edit</a></button>
+                                        <button class='btn delete'><a class='text-white' href='delete.php?=<?php echo $project->getId() ?>'>delete</a></button>
+                                    </td>
+                                </tr>
+                            
+                            </tbody>
+                    </table>
+                
+
+                </section>
+                <?php } ?>
+
+            </section>
       
-    </section>
-    <section class='projectSection'>
-    </section>
+         </section>
+ 
     
 
 
