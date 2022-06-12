@@ -9,6 +9,8 @@ class Projectmanager {
         $this->connect = $db;
     }   
 
+    /* method to create new project and insert it into the database 
+        based on the user id -freelancer in this case- */
 
     public function createProject($id,$project){
 
@@ -76,4 +78,43 @@ class Projectmanager {
 
         return $projectsArray;
     }
+
+
+    // fetch a specific project by id 
+    public function getProjectById($idProject,$idFreelancer) {
+
+        $query = 'SELECT * FROM projects INNER JOIN 
+                  users on users.id = projects.idUser 
+                 WHERE idProject = :id_project AND id_freelancer = :id ';
+
+        $stmt = $this->connect->prepare($query);
+        $stmt->execute(['id_project'=>$idProject ,'id_freelancer'=>$idFreelancer]);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            if($result):
+
+                $projectArray = array();
+
+                foreach($result as $specificProject){
+
+                    $project = new Project();
+                    $project->setUniqueId($specificProject['']);
+                }
+
+
+            endif;
+
+
+    }
+
+    public function deleteProject($idProject,$idFreelancer){
+
+
+        $query = 'DELETE  FROM projects 
+                    WHERE idProject = :id_project ';
+          $stmt = $this->connect->prepare($query);
+          $stmt->execute(['id_project'=>$idProject]);
+        
+    }
+
 }

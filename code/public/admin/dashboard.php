@@ -160,10 +160,10 @@ $projects = $projectManager->getProjects($id);
                 </div>
             </div>
             <section class='projectSection mt-5'>
-               
+
                 <div class='w-100 '>
-                    <table class='tableContainer table'>
-                        <thead>
+                    
+                    <table class= 'table'>
                             <tr>
                                 <th>project code</th>
                           
@@ -175,28 +175,26 @@ $projects = $projectManager->getProjects($id);
 
                                 <th>action</th>
                             </tr>
-                         </thead>
-                            <tbody >
+
                             <?php foreach($projects as $project) { ?>
 
-                                <tr>
+                                <tr >
                                     <td><?php echo $project->getUniqueId() ?></td>
                                     <td><?php echo $project->getProjectName() ?></td>
                                     <td><?php echo $project->getClientName() ?></td>
                                     <td><?php echo $project->getState() ?></td>
                                     <td >
-                                        <button class='btn  show '><a class='text-white' href="project.php?=<?php echo $project->getId() ?>">view</a></button>
-                                        <button class='btn  edit'><a class='text-white' href='edit.php?=<?php echo $project->getId() ?>'>edit</a></button>
-                                        <button class='btn delete'><a class='text-white' href='delete.php?=<?php echo $project->getId() ?>'>delete</a></button>
+                                        <button  class='btn showButton  '><a class='text-white show' href="project.php?id=<?php echo $project->getId() ?>">view</a></button>
+                                        <button class='btn editButton '><a class='text-white edit' href='edit.php?id=<?php echo $project->getId() ?>'>edit</a></button>
+                                        <button class='btn deleteButton '><a class='text-white delete' href='delete.php?id=<?php echo $project->getId() ?>'>delete</a></button>
                                     </td>
                                 </tr>
-                            
-                            </tbody>
+                          <?php } ?>  
                     </table>
                 
-
+                                
                 </section>
-                <?php } ?>
+            
 
             </section>
       

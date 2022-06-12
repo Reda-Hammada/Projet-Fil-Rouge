@@ -164,10 +164,10 @@ body {
 
 /* project container */
 
-.edit {
+ .edit,
+ .show,
+ .delete {
 
     text-decoration: none;
-    background-color: var(--secondary-color);
 }
-
 

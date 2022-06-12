@@ -55,7 +55,6 @@ var emailDiv = document.getElementById('emailDiv');
     }
 
 //render change password form
-
 const renderPass = () => {
 var passDiv = document.getElementById('passDiv');
 

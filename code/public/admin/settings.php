@@ -103,12 +103,14 @@ if(!$_SESSION['email'] && !$_SESSION['pass_word']){
 
     <div class='d-flex mt-5 adminContainer '>
         <i class="fa-solid fa-house-user ms-4 mt-1"></i>
-        <p class='ms-1'><a href='dashboard.php'>Admin</a></p>
+        <p class='ms-1'><a class='text-white' href='dashboard.php'>Admin</a></p>
     </div>
 
-    <div class='d-flex mt-3 adminContainer'>
+    <div class=' mt-3 adminContainer'>
 
-    <p onClick="renderEmail()" id='email'>Change your email</p>
+        <p  class='ms-3' onClick="renderEmail()" id='email'>Change your email</p>
+        <p  class='ms-3' onClick="renderPass()" id='pass'> change your password</p>
+
 
     </div>
     <div class='logoutButton'>
@@ -120,22 +122,7 @@ if(!$_SESSION['email'] && !$_SESSION['pass_word']){
 
 </section>
     <section>
-        <div>
-            <div>
-                <p onClick="renderEmail()" id='email'>Change your email</p>
-
-             
-
-              
-
-            </div>
-                <div>
-                    <p  onClick="renderPass()" id='pass'> change your password</p>
-                
-
-                
-                </div>
-        </div>
+      
         <div>
             <div id="emailDiv">
             
