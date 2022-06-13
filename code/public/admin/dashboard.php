@@ -81,7 +81,7 @@ $projects = $projectManager->getProjects($id);
       
             <div class='d-flex mt-5 adminContainer '>
                 <i class="fa-solid fa-house-user ms-4 mt-1"></i>
-                <p class='ms-1'><a href='dashboard.php'>Admin</a></p>
+                <p class='ms-1'><a href='dashboard.php'>Admin dashboard</a></p>
             </div>
 
             <div class='d-flex mt-3 adminContainer'>
@@ -132,7 +132,7 @@ $projects = $projectManager->getProjects($id);
 
                         <div class=' mt-4 form-group'>
 
-                            <input  class=" w-75  form-control" required type='text' name='emailClient'   placeholder ='client email'>
+                            <input  class=" w-75  form-control" required type='email' name='emailClient'   placeholder ='client email'>
 
                         </div>
 

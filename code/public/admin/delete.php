@@ -7,12 +7,13 @@ include '../../entities/projectClass.php';
  session_start();
 
 $idProject =  $_GET['id'];
-$idFreelancer = $_SESSION['id'];
 
 $dataBase = new DataBase();
 $db = $dataBase->connectDB();
 $projectManager = new Projectmanager($db);
+
 $projectManager->deleteProject($idProject,$idFreelancer);
+
 header('location:dashboard.php');
 
 ?>

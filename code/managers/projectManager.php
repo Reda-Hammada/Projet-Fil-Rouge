@@ -16,15 +16,19 @@ class Projectmanager {
 
         $uniqueId = $project->getUniqueId();
         $projectName = $project->getProjectName();
+        $clientEmail = $project->getEmailClient();
         $client = $project->getClientName();
         $description = $project->getDescription();
         $state = $project->getState();
 
-        $query = "INSERT INTO projects (uniqueId,project_name,client_name,description,state,idUser) 
-                  VALUES(:uniqueId, :projectName, :client,:description,:state,:id)";
+        $query = "INSERT INTO projects (uniqueId,project_name,client_email,client_name,description,state,idUser) 
+                  VALUES(:uniqueId, :projectName,:clientEmail,:client,:description,:state,:id)";
+
         $stmt = $this->connect->prepare($query);
-        $execute = $stmt->execute(['uniqueId' =>  $uniqueId, 'projectName' =>  $projectName, 'client' => $client, 
-                        'description' =>  $description, 'state' => $state, 'id'=> $id]);
+
+        $execute = $stmt->execute(['uniqueId' =>  $uniqueId, 'projectName' =>  $projectName, 
+                                    'clientEmail' => $clientEmail,'client' => $client, 
+                                    'description' =>  $description, 'state' => $state, 'id'=> $id]);
 
         if($execute){
 
@@ -85,10 +89,10 @@ class Projectmanager {
 
         $query = 'SELECT * FROM projects INNER JOIN 
                   users on users.id = projects.idUser 
-                 WHERE idProject = :id_project AND id_freelancer = :id ';
+                 WHERE idProject = :id_project AND idUser = :id ';
 
         $stmt = $this->connect->prepare($query);
-        $stmt->execute(['id_project'=>$idProject ,'id_freelancer'=>$idFreelancer]);
+        $stmt->execute(["id_project"=>$idProject,"id"=>$idFreelancer]);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             if($result):
@@ -98,8 +102,17 @@ class Projectmanager {
                 foreach($result as $specificProject){
 
                     $project = new Project();
-                    $project->setUniqueId($specificProject['']);
+                    $project->setUniqueId($specificProject['uniqueId']);
+                    $project->setProjectName($specificProject['project_name']);
+                    $project->setClientName($specificProject['client_name']);
+                    $project->setEmailClient($specificProject['client_email']);
+                    $project->setState($specificProject['state']);
+                    $project->setDescription($specificProject['description']);
+
+                    array_push($projectArray, $project);
                 }
+
+                return $projectArray;
 
 
             endif;
@@ -107,7 +120,7 @@ class Projectmanager {
 
     }
 
-    public function deleteProject($idProject,$idFreelancer){
+    public function deleteProject($idProject){
 
 
         $query = 'DELETE  FROM projects 

@@ -103,7 +103,7 @@ if(!$_SESSION['email'] && !$_SESSION['pass_word']){
 
     <div class='d-flex mt-5 adminContainer '>
         <i class="fa-solid fa-house-user ms-4 mt-1"></i>
-        <p class='ms-1'><a class='text-white' href='dashboard.php'>Admin</a></p>
+        <p class='ms-1'><a class='text-white' href='dashboard.php'>Admin dashboard</a></p>
     </div>
 
     <div class=' mt-3 adminContainer'>

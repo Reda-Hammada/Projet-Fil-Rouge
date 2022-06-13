@@ -171,3 +171,40 @@ body {
     text-decoration: none;
 }
 
+
+/* project container */
+
+
+/* dashboard */
+
+/* view page */
+
+.projectContainer{
+
+    background-color: whitesmoke;
+    height: 80%;
+    margin-left: 10%;
+    width: 100%;
+    margin-top: 10%;
+    padding-top: 10%;
+    padding-left: 10%;
+    border-radius: 15px;
+    overflow-x: hidden;
+
+}
+
+.projectContainer a {
+
+    color:#fff;
+    text-decoration: none;
+}
+
+.sendCodeToClient{
+
+    background-color: var(--alternative-color);
+    border: 2px solid var(--alternative-color);
+    color: #fff;
+    border-radius: 5px;
+    height: 40px;
+    font-weight: bold;
+}
