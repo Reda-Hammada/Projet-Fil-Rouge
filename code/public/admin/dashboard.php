@@ -163,7 +163,7 @@ $projects = $projectManager->getProjects($id);
 
                 <div class='w-100 '>
                     
-                    <table class= 'table'>
+                    <table class= 'table table-hover'>
                             <tr>
                                 <th>project code</th>
                           

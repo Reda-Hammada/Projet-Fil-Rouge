@@ -74,13 +74,8 @@ if(!$_SESSION['email'] && !$_SESSION['pass_word']){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Document</title>
-    <script>
-        
-<p>lorem</p>
-
-
-    </script>
+    <title>Settings</title>
+ 
 </head>
 <body>
 <header>
@@ -97,43 +92,44 @@ if(!$_SESSION['email'] && !$_SESSION['pass_word']){
 
 <header>
 
-<section class='d-flex'>
+<main>
+    <section class='d-flex'>
 
-<section class='sideNavBar'>
+    <section class='sideNavBar'>
 
-    <div class='d-flex mt-5 adminContainer '>
-        <i class="fa-solid fa-house-user ms-4 mt-1"></i>
-        <p class='ms-1'><a class='text-white' href='dashboard.php'>Admin dashboard</a></p>
-    </div>
-
-    <div class=' mt-3 adminContainer'>
-
-        <p  class='ms-3' onClick="renderEmail()" id='email'>Change your email</p>
-        <p  class='ms-3' onClick="renderPass()" id='pass'> change your password</p>
-
-
-    </div>
-    <div class='logoutButton'>
-        <button class='btn'><a href='../auth/logout.php'>log out</a></button>
-    </div>
-    <div class='adminName'>
-        <p><?php echo 'logged as : ' . ucwords($_SESSION['fullName']) ?></p>
-    </div>
-
-</section>
-    <section>
-      
-        <div>
-            <div id="emailDiv">
-            
-            </div>
-            
-        <div>
-        
-        <div id='passDiv'>
+        <div class='d-flex mt-5 adminContainer '>
+            <i class="fa-solid fa-house-user ms-4 mt-1"></i>
+            <p class='ms-1'><a class='text-white' href='dashboard.php'>Admin dashboard</a></p>
         </div>
+
+        <div class=' mt-3 adminContainer'>
+
+            <p  class='ms-3' onClick="renderEmail()" id='email'>Change your email</p>
+            <p  class='ms-3' onClick="renderPass()" id='pass'> change your password</p>
+
+
+        </div>
+        <div class='logoutButton'>
+            <button class='btn'><a href='../auth/logout.php'>log out</a></button>
+        </div>
+        <div class='adminName'>
+            <p><?php echo 'logged as : ' . ucwords($_SESSION['fullName']) ?></p>
+        </div>
+
     </section>
-    
+        <section class='mt-5 ms-5'>
+        
+                <div class='emailContainer' id="emailDiv">
+                
+                </div>
+                
+            
+            <div class='passwordContainer' id='passDiv'>
+                
+            </div>
+        </section>
+        
+</main>
     <script src="../asset/script/app.js"></script>
 </body>
 </html>
