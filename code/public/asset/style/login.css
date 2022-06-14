@@ -33,7 +33,7 @@ body {
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
+    margin-top: 5%;
     height: 450px;
     border-radius: 10px;
 }
@@ -75,7 +75,7 @@ body {
     font-size: 1rem;
     cursor: pointer;
     color:#fff;
-    margin-top: 16px;
+    margin-top: 20px;
 }
 
 .signUp a {
@@ -92,7 +92,7 @@ body {
 .logInContainer  {
 
     width:  100%;
-    margin-top: 20%;
+    margin-top: 30%;
     text-align: center;
     
 }

@@ -30,19 +30,7 @@ class Projectmanager {
                                     'clientEmail' => $clientEmail,'client' => $client, 
                                     'description' =>  $description, 'state' => $state, 'id'=> $id]);
 
-        if($execute){
-
-            return "project added successfully";
-
-        }
-
-        else {
-
-            if(!$execute){
-
-                return "something went wrong";
-            }
-        }
+ 
 
 
 
@@ -129,5 +117,7 @@ class Projectmanager {
           $stmt->execute(['id_project'=>$idProject]);
         
     }
+
+
 
 }

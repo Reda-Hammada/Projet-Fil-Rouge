@@ -61,6 +61,7 @@ $projects = $projectManager->getProjects($id);
     <title>Admin dashboard</title>
 </head>
 <body>
+    
     <header>
 
         <nav class='d-flex'>
@@ -75,10 +76,12 @@ $projects = $projectManager->getProjects($id);
 
     <header>
  
-    <section class='d-flex'>
+    <main>
+
+        <section class='d-flex'>
 
         <section class='sideNavBar'>
-      
+
             <div class='d-flex mt-5 adminContainer '>
                 <i class="fa-solid fa-house-user ms-4 mt-1"></i>
                 <p class='ms-1'><a href='dashboard.php'>Admin dashboard</a></p>
@@ -108,7 +111,7 @@ $projects = $projectManager->getProjects($id);
             <div>
                 
             <div class='popupContainer'>
-    
+
                 <div class='mt-4 popupForm'>
 
                     <div class='closeContainer'>
@@ -166,11 +169,11 @@ $projects = $projectManager->getProjects($id);
                     <table class= 'table table-hover'>
                             <tr>
                                 <th>project code</th>
-                          
+                        
                                 <th>project name</th>
-                           
+                        
                                 <th>client name</th>
-                          
+                        
                                 <th>state</th>
 
                                 <th>action</th>
@@ -189,7 +192,7 @@ $projects = $projectManager->getProjects($id);
                                         <button class='btn deleteButton '><a class='text-white delete' href='delete.php?id=<?php echo $project->getId() ?>'>delete</a></button>
                                     </td>
                                 </tr>
-                          <?php } ?>  
+                        <?php } ?>  
                     </table>
                 
                                 
@@ -197,11 +200,12 @@ $projects = $projectManager->getProjects($id);
             
 
             </section>
-      
-         </section>
- 
-    
 
+        </section>
+
+
+
+    </main>
 
     <script src="../asset/script/app.js"></script>
 
