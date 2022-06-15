@@ -83,7 +83,6 @@ class Projectmanager {
         $stmt->execute(["id_project"=>$idProject,"id"=>$idFreelancer]);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            if($result):
 
                 $projectArray = array();
 
@@ -103,7 +102,7 @@ class Projectmanager {
                 return $projectArray;
 
 
-            endif;
+            
 
 
     }
@@ -116,6 +115,34 @@ class Projectmanager {
           $stmt = $this->connect->prepare($query);
           $stmt->execute(['id_project'=>$idProject]);
         
+    }
+
+    public function updateProject($updateProject) {
+
+        // bring data from setter to use it in SQL query  
+        $idProject = $updateProject->getId();
+        $clientName = $updateProject->getClientName();
+        $projectName = $updateProject->getProjectName();
+        $clientEmail = $updateProject->getEmailClient();
+        $projectState = $updateProject->getState();
+        $projectDescription = $updateProject->getDescription();
+
+
+        $query = "UPDATE projects SET client_name = :clientName, project_name =  :projectName,
+                 client_email = :clientEmail, state= :projectState, description = :projectDescription 
+                 WHERE idProject = :idProject";
+
+        $stmt = $this->connect->prepare($query);
+        $execute = $stmt->execute(['clientName' => $clientName,'projectName' =>  $projectName,'clientEmail'=> $clientEmail,
+                                   'projectState'=> $projectState , 'projectDescription'=>  $projectDescription,'idProject'=> $idProject]);
+
+        if($execute):
+
+            header('location:./../admin/dashboard.php');
+
+        endif;
+                              
+
     }
 
 

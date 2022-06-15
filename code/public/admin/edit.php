@@ -7,7 +7,7 @@ include '../../entities/projectClass.php';
 // start session
 session_start();
 
-//  check if user session is set else it will redirect him login page
+//  check if user session is not set to redirect him login page
 if(!$_SESSION['email'] && !$_SESSION['pass_word']){
 
     header('location:../auth/login.php');
@@ -21,6 +21,7 @@ $dataBase = new DataBase();
 $db = $dataBase->connectDB();
 $projectManager = new Projectmanager($db);
 
+
 // method that brings the project by id based on each user
 $project = $projectManager->getProjectById($idProject,$idFreelancer);
 
@@ -28,23 +29,24 @@ $project = $projectManager->getProjectById($idProject,$idFreelancer);
 // if edit form submitted the project row will be updated in the database 
 
     if(isset($_POST['edit'])):
-        
+
         /* create instance of Project class to pass data to updateProject 
         method in Projectmanager class */
 
         $updateProject = new Project();
 
         $updateProject->SetId($idProject);
-        $updateProject->setClientName($_POST['']);
-        $updateProject->setProjectName($_POST['']);
-        $updateProject->setEmailClient($_POST['']);
-        $updateProject->setState($_POST['']);
-        $updateProject->setDescription($_POST['']);
-        $projectManager->updateProject($updateProject);
+        $updateProject->setClientName($_POST['clientName']);
+        $updateProject->setProjectName($_POST['projectName']);
+        $updateProject->setEmailClient($_POST['emailClient']);
+        $updateProject->setState($_POST['state']);
+        $updateProject->setDescription($_POST['description']);
+        $edit = $projectManager->updateProject($updateProject);
 
-
+        print_r($edit);
 
     endif;
+
 
 ?>
 
@@ -104,37 +106,38 @@ $project = $projectManager->getProjectById($idProject,$idFreelancer);
         <section class='mainContainer'>
 
                 <div>
+                <?php foreach($project as $fetchedProject) { ?>
+
                     <form method='post'>
                     <div class='form-group '>
 
-                        <?php foreach($project as $fetchedProject) { ?>
 
-                            <input  class="form-control w-75" required type='text' name='projectName' value=<?php echo $fetchedProject->getProjectName()?> placeholder ='project name'>
-
-                        </div>
-
-                        <div class=' mt-4 form-group'>
-
-                            <input value=<?php echo $fetchedProject->getClientName()?> class=" w-75  form-control" required type='text' name='clientName'   placeholder ='client name'>
+                            <input  class="form-control w-75"  type='text' name="projectName" required value="<?php echo $fetchedProject->getProjectName()?>" placeholder ='project name'>
 
                         </div>
 
                         <div class=' mt-4 form-group'>
 
-                            <input value=<?php echo $fetchedProject->getEmailClient()?>  class=" w-75  form-control" required type='email' name='emailClient'   placeholder ='client email'>
+                            <input required value="<?php echo $fetchedProject->getClientName()?>" class=" w-75  form-control"  type='text' name="clientName"   placeholder ='client name'>
+
+                        </div>
+
+                        <div class=' mt-4 form-group'>
+
+                            <input  value="<?php  echo $fetchedProject->getEmailClient()?> " class=" w-75  form-control"  type='email' name="emailClient"  placeholder ='client email'>
 
                         </div>
 
                         <div class='  mt-4 form-group'>
                                 
-                            <input value=<?php echo $fetchedProject->getState() ?> type='text' class="form-control  w-75" required name='state' placeholder='project phase'>
+                            <input required value="<?php echo  $fetchedProject->getState() ?> "type='text' class="form-control  w-75"  name="state" placeholder='project phase'>
             
 
                         </div>
 
                         <div class=  mt-4 form-control'>
 
-                            <textarea  class="  w-75 form-control" required name="description"><?php echo $fetchedProject->getDescription() ?></textarea>
+                            <textarea  class="  w-75 form-control"  name="description"><?php echo $fetchedProject->getDescription() ?></textarea>
 
                         </div>
 
@@ -143,8 +146,9 @@ $project = $projectManager->getProjectById($idProject,$idFreelancer);
                             <input id="addButton" class="  mt-3 btn  text-white" type='submit' name="edit" value="Edit">
 
                         </div>
-                    <?php } ?>
                     </form> 
+                    <?php } ?>
+
                 </div>
            
       

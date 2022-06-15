@@ -7,6 +7,7 @@ include '../../entities/projectClass.php';
 
  session_start();
 
+//  check if user session is not set to redirect him login page
 
  if(!$_SESSION['email'] && !$_SESSION['pass_word']){
 

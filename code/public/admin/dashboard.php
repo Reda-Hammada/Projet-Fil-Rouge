@@ -8,7 +8,7 @@ session_start();
 
 $id = $_SESSION['id'];
 
-//  check if user session is set else it will redirect him login page
+//  check if user session is not set to redirect him login page
 if(!$_SESSION['email'] && !$_SESSION['pass_word']){
 
     header('location:../auth/login.php');
