@@ -24,6 +24,28 @@ $projectManager = new Projectmanager($db);
 // method that brings the project by id based on each user
 $project = $projectManager->getProjectById($idProject,$idFreelancer);
 
+
+// if edit form submitted the project row will be updated in the database 
+
+    if(isset($_POST['edit'])):
+        
+        /* create instance of Project class to pass data to updateProject 
+        method in Projectmanager class */
+
+        $updateProject = new Project();
+
+        $updateProject->SetId($idProject);
+        $updateProject->setClientName($_POST['']);
+        $updateProject->setProjectName($_POST['']);
+        $updateProject->setEmailClient($_POST['']);
+        $updateProject->setState($_POST['']);
+        $updateProject->setDescription($_POST['']);
+        $projectManager->updateProject($updateProject);
+
+
+
+    endif;
+
 ?>
 
 <!DOCTYPE html>
@@ -35,6 +57,8 @@ $project = $projectManager->getProjectById($idProject,$idFreelancer);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../asset/style/admin.css">
+    <link rel="stylesheet" href="../asset/style/edit.css">
+
 
     <title>Admin dashboard</title>
 </head>
@@ -116,7 +140,7 @@ $project = $projectManager->getProjectById($idProject,$idFreelancer);
 
                         <div class='edit'>
 
-                            <input id="addButton" class="  mt-3 btn  text-white" type='submit' name="addProject" value="Edit">
+                            <input id="addButton" class="  mt-3 btn  text-white" type='submit' name="edit" value="Edit">
 
                         </div>
                     <?php } ?>

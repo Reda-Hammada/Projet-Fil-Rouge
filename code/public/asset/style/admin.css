@@ -19,6 +19,11 @@ body {
     
 }
 
+
+a { 
+    text-decoration: none;
+    color:#fff;
+}
 /* nvabar */
 
 .sideNavBar {
@@ -275,5 +280,27 @@ input[type='password']{
    margin-top: 10px;
    height: 35px;
 }
+
+
+#email,#pass {
+
+    font-size: 1.1rem;
+}
 /* settings page */
 /* dashboard */
+
+
+/* project page */
+
+.projectContainer #emailButton {
+
+    text-decoration: none;
+    color:#fff;
+}
+
+.logoutButton #logoutButton  {
+
+    
+    text-decoration: none;
+    color:#fff;
+}

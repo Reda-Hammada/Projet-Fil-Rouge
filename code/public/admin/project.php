@@ -76,7 +76,7 @@ $project = $projectManager->getProjectById($idProject,$idFreelancer);
 
             </div>
             <div class='logoutButton'>
-                <button class='btn'><a href='../auth/logout.php'>log out</a></button>
+                <button class='btn'><a id='logoutButton' href='../auth/logout.php'>log out</a></button>
             </div>
             <div class='adminName'>
                 <p><?php echo 'logged as : ' . ucwords($_SESSION['fullName']) ?></p>
@@ -95,7 +95,7 @@ $project = $projectManager->getProjectById($idProject,$idFreelancer);
                 <p>project phase : <?php echo $specificProject->getState() ?></p>
                 <p>description : <?php echo $specificProject->getDescription() ?></p>
                 
-                <button class="sendCodeToClient"><a href="mailto:<?php echo  $specificProject->getEmailClient()?>?subject=Project progress code Request&body=Hello <?php echo $specificProject->getClientName()?>%0A%0Ayou can check your project progress with this code : <?php echo $specificProject->getUniqueId() ?>%0A%0Ausing this link : <?php  echo 'http://localhost/Projet-Fil-Rouge/code/public/client/client.php' ?>"> Send Email </a></button>
+                <button class="sendCodeToClient"><a id='emailButton' href="mailto:<?php echo  $specificProject->getEmailClient()?>?subject=Project progress code Request&body=Hello <?php echo $specificProject->getClientName()?>%0A%0Ayou can check your project progress with this code : <?php echo $specificProject->getUniqueId() ?>%0A%0Ausing this link : <?php  echo 'http://localhost/Projet-Fil-Rouge/code/public/client/client.php' ?>"> Send Email </a></button>
 
                 <?php } ?>
             </div>
