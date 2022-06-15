@@ -223,9 +223,8 @@ body {
 }
 
 .emailContainer input[type='password'], 
- input[type='email']{
-
-    border: 2px solid var(--primary-color);
+ input[type='email'], input[type='text']{
+        
     border-radius: 7px;
     color:var(--text-color);
     width: 220px;

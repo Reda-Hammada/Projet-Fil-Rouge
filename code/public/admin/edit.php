@@ -7,6 +7,12 @@ include '../../entities/projectClass.php';
 // start session
 session_start();
 
+//  check if user session is set else it will redirect him login page
+if(!$_SESSION['email'] && !$_SESSION['pass_word']){
+
+    header('location:../auth/login.php');
+}
+
 $idFreelancer = $_SESSION['id'];
 $idProject = $_GET['id'];
 
@@ -73,8 +79,50 @@ $project = $projectManager->getProjectById($idProject,$idFreelancer);
 
         <section class='mainContainer'>
 
+                <div>
+                    <form method='post'>
+                    <div class='form-group '>
+
+                        <?php foreach($project as $fetchedProject) { ?>
+
+                            <input  class="form-control w-75" required type='text' name='projectName' value=<?php echo $fetchedProject->getProjectName()?> placeholder ='project name'>
+
+                        </div>
+
+                        <div class=' mt-4 form-group'>
+
+                            <input value=<?php echo $fetchedProject->getClientName()?> class=" w-75  form-control" required type='text' name='clientName'   placeholder ='client name'>
+
+                        </div>
+
+                        <div class=' mt-4 form-group'>
+
+                            <input value=<?php echo $fetchedProject->getEmailClient()?>  class=" w-75  form-control" required type='email' name='emailClient'   placeholder ='client email'>
+
+                        </div>
+
+                        <div class='  mt-4 form-group'>
+                                
+                            <input value=<?php echo $fetchedProject->getState() ?> type='text' class="form-control  w-75" required name='state' placeholder='project phase'>
+            
+
+                        </div>
+
+                        <div class=  mt-4 form-control'>
+
+                            <textarea  class="  w-75 form-control" required name="description"><?php echo $fetchedProject->getDescription() ?></textarea>
+
+                        </div>
+
+                        <div class='edit'>
+
+                            <input id="addButton" class="  mt-3 btn  text-white" type='submit' name="addProject" value="Edit">
+
+                        </div>
+                    <?php } ?>
+                    </form> 
+                </div>
            
-            <?php echo $idProject . $idFreelancer ?>
       
          </section>
  

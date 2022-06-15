@@ -7,6 +7,12 @@ include '../../entities/projectClass.php';
 
  session_start();
 
+
+ if(!$_SESSION['email'] && !$_SESSION['pass_word']){
+
+    header('location:../auth/login.php');
+}
+
 /* project id to fetch the wanted project from database and
    freelancer id to user in INNER join 
 */
