@@ -1,7 +1,7 @@
 <?php
 
 include '../../managers/userManager.php';
-include '../../entites/userClass.php';
+include '../../entities/userClass.php';
 include '../../config/config.php';
 
 
