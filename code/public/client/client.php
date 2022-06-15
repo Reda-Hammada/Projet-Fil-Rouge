@@ -12,9 +12,15 @@ $projectManager = new Projectmanager($db);
 
 if(isset($_POST['check'])):
 
+    $checkProgress = new Project();
+    $checkProgress->setUniqueId($_POST['uniqueId']);
+    $progress=  $projectManager->checkProgress($checkProgress);
 
 
 endif;
+
+
+
 
 ?>
 
@@ -43,22 +49,37 @@ endif;
     <main>
         <section class="checkFormContainer">
            <div class="formContainer">
-            <form>
+            <form method='post'> 
                     <input type='text' required name='uniqueId' placeholder='enter the  code to check  your project progress'>
                     <input type='submit' value='check' name='check'>
                 </form>
            </div>
             
         </section>
-        <section class="projetProgressContainer">
-            <div>
-                <h2> <?php 
+        <section class='progressContainer'>
 
+        <?php  if(isset($progress)) { ?>
+            <div class='subProgressContainer' >
+                 
+                 <?php   foreach($progress as $project){ ?>
 
-                            ?>
-                    </h2>
+                        
+                  <p>
+                     <?php echo 'Hello ' . $project->getClientName(); ?>
+                 </p>
+                 <p>          
+                    <?php echo 'your project is ' . $project->getState(); ?>
+                 </p>
+                 <p>
+                    <?php echo $project->getDescription(); ?>
+                 </p>
+                 
+                    <?php }
+                    
+                    }?>
             </div>
         </section>
     </main>
 </body>
 </html>
+ 

@@ -146,5 +146,40 @@ class Projectmanager {
     }
 
 
+    // check project porgress 
+
+    public function checkProgress($checkProgress) {
+
+        $progress = $checkProgress->getUniqueId();
+
+        $query = 'SELECT client_name,project_name,state,description FROM projects
+                    WHERE uniqueId = :uniqueId';
+
+        $stmt = $this->connect->prepare($query);
+         $stmt->execute(['uniqueId' =>  $progress]);
+
+
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            $projectArray = array();
+
+            foreach($result as $projectProgress) {
+
+                $project = new Project();
+                $project->setClientName($projectProgress['client_name']);
+                $project->setProjectName($projectProgress['project_name']);
+                $project->setState($projectProgress['state']);
+                $project->setDescription($projectProgress['description']);
+                array_push($projectArray, $project );
+
+            }
+
+
+            return $projectArray;
+
+        
+
+    }
+
 
 }
