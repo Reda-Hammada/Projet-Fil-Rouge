@@ -1,0 +1,34 @@
+
+/* form ultimate container */
+
+
+.mainContainer {
+
+    width: 60%;
+    text-align: center;
+
+}
+
+.mainContainer form {
+
+    margin-top: 5%;
+    margin-left: 10%;
+    
+}
+
+.mainContainer form .edit {
+
+    width: 80%;
+}
+/* stop user from resizing the textarea */
+
+.mainContainer from input[type='submit']{
+
+    margin-right: 20%;
+}
+
+.mainContainer form textarea {
+
+    resize: none;
+}
+

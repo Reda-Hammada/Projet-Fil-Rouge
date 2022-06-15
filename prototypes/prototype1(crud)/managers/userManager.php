@@ -79,11 +79,7 @@ class Usermanager {
 
         }
 
-        else{
-
-            $error = 'password is Wrong';
-            return $error;
-        }
+      
      
 
 
@@ -109,19 +105,9 @@ class Usermanager {
 
         }
 
-        else{
-
-            $error = 'password is not wrong';
-            return $error;
-        }
+      
 
     }
-        
     
-
-
-
-
-
 
 }

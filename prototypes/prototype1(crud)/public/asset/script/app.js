@@ -1,107 +1,91 @@
 
-//popup form 
+// show popup form 
 
 const showPopUp = () => {
 
-        var button = document.getElementById('showButton');
+    let button = document.getElementById('showButton');
 
-        if(button.click){
-
-
-            document.querySelector('.popupContainer').style.display='block';
-     
-
-    }
+    if(button.click){
 
 
-
-
+        document.querySelector('.popupContainer').style.display='block';
+ 
 
 }
 
+}
+
+//hide popup form when click on close mark
 const hideForm = () => {
+ 
+    let closeButton = document.getElementById('closePopUp');
 
+    if(closeButton.click){
 
-}
-
-
-// setting icon 
-
-const setting = () => {
-
-    let settings = document.getElementById('setting');
-    if(settings.click){
-
-        document.querySelector('.setting').style.display='block';
-
-        
+        document.querySelector('.popupContainer').style.display='none';
     }
+
 }
 
-
-
-
-// render email form
+// render change email  form
 const renderEmail = () => {
 
-    const email = document.getElementById('email');
-    var emailDiv = document.getElementById('emailDiv');
-
-            
-        if(email.click){
-[]
-            const formEmail = `<form method="POST">
-                                <input name="newEmail" placeholder='your new email' name='email' type="text">
-                                <input name="cPassword" placeholder="your password" type="password"  >
-                                <input name="email" type="submit" value="change your email">
-                              </form>
-                              `;
-
-           while(emailDiv.firstChild){
-
-                emailDiv.removeChild(emailDiv.firstChild);
-                emailDiv.insertAdjacentHTML('beforebegin',formEmail);
-           }
-
-           
-            
-            
-
-
-
-        }
+const email = document.getElementById('email');
+var emailDiv = document.getElementById('emailDiv');
         
-           
-        }
+    if(email.click){
 
 
+        const formEmail = `<div class='emailContainer'>
+                                <form method="POST">
+                                    <input  name="newEmail" placeholder='your new email' required name='email' type="email">
+                                    <input name="cPassword" placeholder="your password" required type="password"  >
+                                    <input name="email" type="submit" value="change your email">
+                                </form>
+                            </div>
+                          `;
 
-//render password form
+       while(emailDiv.firstChild){
+
+            emailDiv.removeChild(emailDiv.firstChild);
+            emailDiv.insertAdjacentHTML('beforebegin',formEmail);
+       }
+
+    }
     
+       
+    }
+
+//render change password form
 const renderPass = () => {
-    var passDiv = document.getElementById('passDiv');
+var passDiv = document.getElementById('passDiv');
 
-        const password = document.getElementById('pass');
-
-        if(password.click){
-
-            const formPass = `<form method="POST">
-                                <input name="oldPassword" placeholder="your old password" type="password">
-                                <input name="newPassword" placeholder="your new your password" type="password"  >
-                                <input name="password" type="submit" value="change your password">
-                            </form>`;
-
-            while(passDiv.firstChild){
-
-                passDiv.removeChild(passDiv.firstChild);
-                passDiv.insertAdjacentHTML('beforebegin',formPass);
+    const password = document.getElementById('pass');
 
 
-                
-                           }
-                
+    if(password.click){
 
-        }
+        const formPass = `<div class='passContainer'>
+                                <form method="POST">
+                                    <input name="oldPassword" required placeholder="your old password" type="password">
+                                    <input name="newPassword" required placeholder="your new your password" type="password"  >
+                                    <input name="password" type="submit" value="change your password">
+                               </form>
+                            </div>`;
+
+  
+
+
+            
+       while(passDiv.firstChild){
+
+        passDiv.removeChild(passDiv.firstChild);
+        passDiv.insertAdjacentHTML('beforebegin',formPass);
+    }
+                       
+            
+
+    }
 }
 
 

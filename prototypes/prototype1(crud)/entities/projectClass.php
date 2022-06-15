@@ -6,6 +6,7 @@ class Project {
     private $projectUniqueId;
     private $projectName;
     private $clientName;
+    private $emailClient;
     private $state;
     private $description;
 
@@ -49,6 +50,16 @@ class Project {
     public function getClientName(){
 
         return $this->clientName;
+    }
+
+    public function setEmailClient($emailClient){
+
+        $this->emailClient = $emailClient;
+    }
+
+    public function getEmailClient(){
+
+        return $this->emailClient;
     }
 
     public function setState($state){

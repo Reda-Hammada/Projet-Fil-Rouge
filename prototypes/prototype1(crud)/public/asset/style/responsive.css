@@ -1,0 +1,141 @@
+
+ :root {
+
+
+    --primary-color: #4E4E91;
+    --text-color:  #555555;
+    --font: 'Rubik', sans-serif;
+
+        
+}
+
+/* mobile */
+
+@media only screen and (max-width:1200px){
+
+    .navLinks {
+
+        display: none;
+   }
+
+   .buttonsContainer {
+
+    margin-top: 17px;
+    margin-left: 0%;
+   }
+
+   .heroSection{
+
+    text-align: center;
+   }
+
+
+   .freelancerHeading {
+
+    font-size: 17px;
+   }
+
+   
+   .freelancer{
+
+    text-align: center;
+   }
+
+   .freelancerP{
+       text-align: center;
+   }
+
+   .heroImage img{
+
+      display: none;
+   }
+
+   .whyChoose{
+
+    text-align: center;
+    width: 100%;
+   }
+
+   .whyChooseH2 {
+
+    margin-right: 40%;
+
+   }
+
+   .heroSection{
+
+    margin-top: 5%;
+   }
+
+
+
+  
+   /* features */
+
+   .firstFeature{
+
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;        
+   }
+
+   .secondFeature {
+
+    margin-top:10%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto; 
+
+   }
+
+   .thirdFeature {
+
+    margin-top:11%;
+    margin-left: auto;
+    margin-right: auto; 
+
+    height: 300px;
+   }
+
+   /* contact button */
+
+   .getInTouch input[type='submit'] {
+
+        margin-left: 100px;
+   }
+   
+
+   /* footer */
+
+ 
+   footer {
+
+    text-align: center;
+   }
+   footer h2 {
+
+    text-align: center;
+
+   }
+
+   .quickLinks1,
+   .quickLinks2  {
+
+       margin-right: 7%;
+   }
+
+
+ 
+.getAndRights button {
+
+    margin-right: 18%;
+}
+
+.getInTouch {
+
+    width: 100%;
+}
+
+
+}
+
