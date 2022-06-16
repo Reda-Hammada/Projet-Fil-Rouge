@@ -1,0 +1,488 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin:0;
+}
+
+:root{
+
+    --primary-color: #4E4E91;
+    --text-color:  #555555;
+    --font: 'Rubik', sans-serif;
+    --secondary-color: #FF4800;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: var(--font);
+    overflow-x: hidden;
+
+}
+
+/* navbar starts */
+.logo h1{
+
+    margin-left: 5%;
+    margin-top:20px;
+    color: var(--primary-color);
+}
+.navLinks ul li {
+
+    list-style-type: none;
+    display: inline; 
+    padding-right: 30px;
+    cursor: pointer;
+    color: var(--text-color);
+    text-decoration:none;
+    font-size: 1.2rem;
+}
+
+.navLinks ul{
+    margin-top: 4.6%;
+}
+
+.navLinks ul li a{
+
+    text-decoration:none;
+    color: var(--text-color);
+
+}
+
+.navLinks ul li:hover{
+
+    color: var(--primary-color);
+
+}
+
+
+.buttonsContainer {
+
+    margin-top: 1.1%;
+    margin-left: 15%;
+
+}
+
+.buttonsContainer .logIn {
+
+    width: 100px;
+    height:39px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1rem;
+    border: none var(--primary-color);
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+
+.buttonsContainer .signUp {
+
+    background-color: #fff;
+    color: var(--primary-color);
+    border: solid 1px var(--primary-color);
+    width: 100px;
+    height: 39px;
+    border-radius: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+
+}
+
+
+
+
+.buttonsContainer a  {
+
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.buttonsContainer .signUp  a {
+
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* navbar ends */
+
+/*Hero section starts */
+
+
+.heroSection {
+
+    margin-top: 7%;
+   
+}
+
+
+.heroSection img {
+
+    height: 95%;
+    padding-top: 2%;
+    ;
+}
+
+.heroSection h1{
+
+    font-weight: bolder;
+    font-size: 2.5rem;
+    color: #4E4E91;
+}
+
+.heroSection p {
+
+    font-size: 1.3rem;
+    margin-top: 30px;
+}
+.getStarted {
+
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    width: 120px;
+    height: 45px;
+    font-weight: bold;
+    border-radius: 7px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-top: 20px;
+
+
+}
+
+.getStarted a {
+
+    text-decoration: none;
+    color: #fff;
+
+}
+.getStarted:hover {
+
+    background-color: #FF4800;
+
+}
+
+
+/* Hero section ends */
+
+/*features starts */
+
+.whyChoose {
+
+    width: 100%;
+    margin-top: 2%;
+  
+ 
+}
+
+.whyChoose h2{
+
+    width: 100%;
+    margin-left: 35%;
+    color: var(--primary-color);
+    font-size: 2rem;
+
+
+    
+}
+
+.whyChoose p {
+
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    font-size: 1.2rem;
+    margin-top: 20px;
+
+
+}
+
+
+.featuresContianer {
+
+    width: 100%;
+    text-align: center;
+    margin-top: 3%;
+    
+}
+
+.featuresContianer h4 {
+
+    margin-top: 25px;
+    color: var(--primary-color);
+}
+
+.featuresContianer p {
+
+    margin-top: 15px;
+}
+
+.featuresContianer P {
+
+    color: var(--text-color);
+    font-size: 1rem;
+
+}
+
+.feature1IconContainer img {
+
+    margin-top: 15px;
+}
+
+.feature2IconContainer img {
+
+    margin-top: 15px;
+
+}
+
+.feature3IconContainer img {
+
+    margin-top: 15px;
+
+}
+
+.feature1IconContainer p {
+
+    width: 50%;
+
+}
+
+ .firstFeature{
+
+    width: 30%;
+    text-align: center;
+    border-radius: 20px;
+    height: 320px;
+
+    margin-top: 3%;
+    box-shadow: 5px 5px 5px 5px whitesmoke;
+    margin-right: 10%;
+    
+
+}
+
+ #manageProjects {
+
+    width: 20%;
+    text-align: center;
+  
+}
+
+
+
+
+ .secondFeature {
+
+    text-align: center;
+    box-shadow: 5px 5px 5px 5px whitesmoke;
+    border-radius: 20px;
+    margin-top: 3%;
+    height: 320px;
+    margin-right: 10%;
+
+
+
+
+
+}
+
+.thirdFeature {
+
+    text-align: center;
+    box-shadow: 5px 5px 5px 5px whitesmoke;
+    border-radius: 20px;
+    margin-top: 3%;
+    height: 320px;
+
+}
+
+/* About section */
+
+.aboutSection {
+
+    margin-top: 5%;
+    background-color: whitesmoke;
+    width: 100%;
+    height: fit-content;
+    min-height: fit-content;
+    text-align: center;
+    padding-top: 5%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 5%;
+
+}
+
+
+.aboutHeading h2 {
+
+    color: var(--primary-color);
+}
+
+
+.aboutSection p {
+    
+
+    font-size: 1.2rem;
+    margin-top: 20px;
+    
+
+}
+
+.aboutParagraph {
+
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* About ends */
+
+/* contact statts */ 
+
+
+.contact{
+
+    margin-top: 5%;
+    width: 80%;
+    margin-left: 10%;
+   
+ 
+  
+}
+
+.contactH2Container  {
+
+    width: 100%;
+    text-align: center;
+    color: var(--primary-color);
+
+}
+
+
+.contactContainer {
+
+    width: 60%;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 20%;
+}
+
+
+
+
+
+
+
+
+.getInTouch {
+
+    width: 120px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 18PX;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 7px;
+    border: 1px solid var(--primary-color);
+    font-size: 1rem;
+    font-weight: bold;
+   
+}
+
+.getInTouch:hover {
+
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+.getInTouch a {
+
+    text-decoration: none;
+    color: #fff;
+}
+
+/* footer starts */
+
+footer {
+
+    height: fit-content;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding-top: 5%;
+    margin-top: 5%;
+    padding-bottom: 5%;
+
+}
+
+.logoFooter {
+
+    margin-left: 10px;
+}
+
+
+
+.quickLinks ul li {
+    margin-bottom: 5%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.quickLinks1   a,
+.quickLinks2 a {
+
+    text-decoration: none;
+    color: #fff;
+}
+
+footer ul li {
+
+    list-style-type: none;
+    text-align: start;
+    padding-top: 20px ;
+
+
+}
+
+
+
+.getAndRights p {
+
+    padding-top: 20px;
+    margin-left: 20%;
+}
+
+.getAndRights button {
+
+    margin-left: 20%;
+    background-color: #FF4800;
+    color: #fff;
+    border: none;
+    width: 120px;
+    height: 45px;
+    font-weight: bold;
+    border-radius: 7px;
+    font-size: 1rem;
+    cursor: pointer;
+  
+
+}
+
+.getAndRights button a {
+
+    text-decoration: none;
+    color :#fff;
+}
