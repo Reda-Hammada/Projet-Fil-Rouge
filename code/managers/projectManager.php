@@ -38,7 +38,7 @@ class Projectmanager {
 
     }
 
-    // get all projects from the database 
+    /* get all projects from the database */
 
     public function getProjects($id){
 

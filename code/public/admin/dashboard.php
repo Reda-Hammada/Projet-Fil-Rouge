@@ -168,13 +168,13 @@ $projects = $projectManager->getProjects($id);
                     
                     <table class= 'table table-hover'>
                             <tr>
-                                <th>project code</th>
+                                <th id='project_code'>project code</th>
                         
                                 <th>project name</th>
                         
-                                <th>client name</th>
+                                <th id='client_name'>client name</th>
                         
-                                <th>state</th>
+                                <th id='state'>state</th>
 
                                 <th>action</th>
                             </tr>
@@ -182,10 +182,10 @@ $projects = $projectManager->getProjects($id);
                             <?php foreach($projects as $project) { ?>
 
                                 <tr >
-                                    <td><?php echo $project->getUniqueId() ?></td>
+                                    <td  id='project_code'><?php echo $project->getUniqueId() ?></td>
                                     <td><?php echo $project->getProjectName() ?></td>
-                                    <td><?php echo $project->getClientName() ?></td>
-                                    <td><?php echo $project->getState() ?></td>
+                                    <td id='client_name'><?php echo $project->getClientName() ?></td>
+                                    <td id='state'><?php echo $project->getState() ?></td>
                                     <td >
                                         <button  class='btn showButton  '><a class='text-white show' href="project.php?id=<?php echo $project->getId() ?>">view</a></button>
                                         <button class='btn editButton '><a class='text-white edit' href='edit.php?id=<?php echo $project->getId() ?>'>edit</a></button>
